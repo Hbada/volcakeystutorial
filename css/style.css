@@ -135,7 +135,8 @@ nav ul {
 }
 
 .hero {
-    min-height: 100vh; /* template was 90vh */
+    min-height: 100vh;
+    /* template was 90vh */
     /* hero section occupies 90% of screen; nav bar uses 10% */
     background: linear-gradient(rgba(0, 0, 0, .7), transparent),
         url('../img/plumage.jpg');
@@ -198,9 +199,10 @@ nav ul {
 
 /* make room for sticky header */
 
-#record h2, 
-.main-title, 
-#coming-soon h2 {
+#record h2,
+.main-title,
+#coming-soon h2,
+#more h2 {
     padding-top: 15vh;
 }
 
@@ -225,10 +227,11 @@ nav ul {
 /*************************/
 #record {
     /* original background in template was light so it had a light gradient over it */
-/*background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .4)), url('../img/astronomy.jpg');*/
-background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url('../img/astronomy.jpg');
-color: white; /* when background is dark */
-background-size: cover;
+    /*background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .4)), url('../img/astronomy.jpg');*/
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url('../img/astronomy.jpg');
+    color: white;
+    /* when background is dark */
+    background-size: cover;
 }
 
 #record h3 {
@@ -240,8 +243,10 @@ background-size: cover;
 }
 
 .recording-wrapper {
-    display: flex; /* wrapper gets flex */
-    padding: 1rem; /* template was 2rem */
+    display: flex;
+    /* wrapper gets flex */
+    padding: 1rem;
+    /* template was 2rem */
     margin: auto;
     flex-direction: row;
     justify-content: left;
@@ -250,7 +255,8 @@ background-size: cover;
 }
 
 .icon-wrapper {
-    padding-right: 2rem; /* adds padding to the right of icon(s) */
+    padding-right: 2rem;
+    /* adds padding to the right of icon(s) */
 }
 
 .icon {
@@ -258,7 +264,7 @@ background-size: cover;
     height: 60px;
     margin: auto;
     /* move neighbours slightly right in case of multiple icons in a row */
-    padding-right: .5rem; 
+    padding-right: .5rem;
 }
 
 /* not sure hte flexwrap stuff is working for mobile */
@@ -271,7 +277,8 @@ background-size: cover;
     display: flex;
     font-size: 2rem;
     flex: 10 1 50rem;
-    align-items: center; /* vertically centres item to the previous child, I think */
+    align-items: center;
+    /* vertically centres item to the previous child, I think */
     margin: auto;
 }
 
@@ -301,7 +308,8 @@ div.detail h3 {
     /* gradient-filled text */
     /* not currently used 
     background: linear-gradient(#131c27, #663b34); */
-    background: white; /* template had gradient filled text; not used here because background is dark */
+    background: white;
+    /* template had gradient filled text; not used here because background is dark */
     /* gradient to be applied to text area */
     -webkit-background-clip: text;
     /* applies the background to text space only */
@@ -376,11 +384,13 @@ div.detail h3 {
 .bullet-icon {
     height: 32px;
     padding: .5rem;
-    align-items: center; /* vertical align */
+    align-items: center;
+    /* vertical align */
 }
 
 #adjust .cards-with-bullets {
-    align-items: start; /* keep icons in line at top edge of row */
+    align-items: start;
+    /* keep icons in line at top edge of row */
 }
 
 #adjust .cards-with-bullets ul {
@@ -401,7 +411,8 @@ div.detail h3 {
 }
 
 #adjust button {
-    margin-bottom: 5rem; /* manually create extra space even though it's a long section */
+    margin-bottom: 5rem;
+    /* manually create extra space even though it's a long section */
 }
 
 /********************/
@@ -409,7 +420,8 @@ div.detail h3 {
 /********************/
 
 .save-wrapper {
-    display: flex; /* wrapper gets flex */
+    display: flex;
+    /* wrapper gets flex */
     padding: 2rem;
     margin: auto;
     flex-direction: row;
@@ -422,7 +434,8 @@ div.detail h3 {
     display: flex;
     font-size: 2rem;
     flex: 10 1 50rem;
-    align-items: center; /* vertically centres item to the previous child, I think */
+    align-items: center;
+    /* vertically centres item to the previous child, I think */
     margin: auto;
 }
 
@@ -440,6 +453,8 @@ div.detail h3 {
     color: white;
     background-size: cover;
 }
+
+/* button(s) at bottom */
 #more .inner-nav {
     /* styled after nav */
     display: flex;
@@ -458,28 +473,46 @@ div.detail h3 {
     /* adds wrapping needed for mobile browsers */
 }
 
-/* set up More section with grid layout */
-#more .more-wrapper {
+/* set up paragraphs with grid layout */
+.more-wrapper {
+    padding-top: 2rem;
     display: grid;
-    padding-top: 3rem;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 
-        20rem 
-        20rem;
-    grid-gap: 7rem;
-    flex-direction: row;
+        30rem 
+        30rem;
+    grid-template-areas: 
+        "para1 para2"
+        "para3 para4";
+    flex-direction: column;
+    grid-gap: 1rem;
 }
 
 /* set up child elements as boxes */
-.para1, 
+.box-grid {
+    padding: 2rem;
+}
+
+.para1 {
+    grid-area: para1;
+}
+
 .para2 {
-    /* no 'box' styling at this time */
+    grid-area: para2;
+}
+
+.para3 {
+    grid-area: para3;
+}
+
+.para4 {
+    grid-area: para4;
 }
 
 
 #record .inner-nav li,
-#more .inner-nav ul, 
-#play .inner-nav ul, 
+#more .inner-nav ul,
+#play .inner-nav ul,
 #adjust .inner-nav ul {
     /* styled after nav ul */
     display: flex;
@@ -501,31 +534,46 @@ div.detail h3 {
 /************************/
 
 .about-head {
-    padding: 10vh 3rem 3rem 3rem;
-    /* explicit to accommodate sticky header's height */
-    /* padding: 3rem; WHEN NOT USING STICKY HEADER */
-    min-height: 3vh;
-    display: flex;
-    flex-direction: column;
-    color: violet;
-    text-align: center;
-}
-
-.about-head {
-    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)),
         url("../img/astronomy.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
+    color: violet;
+    padding: 15vh 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
 }
 
-.about-head h3 {
-    padding: 1rem;
+.about-wrapper {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 
+        8rem 
+        30rem;
+    grid-template-areas: 
+        "about1 about1"
+        "about2 about3";
+    flex-direction: column;
+    grid-gap: 1rem;
 }
 
+/* About Section boxes */
+
+.about1 {
+    grid-area: about1;
+}
+
+.about2 {
+    grid-area: about2;
+}
+
+.about3 {
+    grid-area: about3;
+}
+
+.about4 {
+    grid-area: about4;
+}
 
 /******************/
 /*** CONTACT ***/
@@ -535,7 +583,7 @@ div.detail h3 {
 
 #contact {
     min-height: 100vh;
-    background: linear-gradient(rgba(150, 220, 240, .8), rgba(0,0,0, .8)),
+    background: linear-gradient(rgba(150, 220, 240, .8), rgba(0, 0, 0, .8)),
         url("../img/stones.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -725,7 +773,7 @@ footer a {
         width: 100%;
     }
 
- 
+
     footer {
         text-align: center;
     }
@@ -744,9 +792,9 @@ footer a {
         width: 100%;
         margin: auto 0;
     }
-    .recording-wrapper,
-    .more-wrapper {
+
+    .recording-wrapper, {
         flex-direction: column;
     }
-    
+
 }

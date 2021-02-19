@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="TinyGuide - Volca Keys edition - use your synthesizer right away.">
+    <meta name="robots" content="index,follow">
+
+    <link rel="icon" href="icons/music.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>TinyGuide for Korg Volca Keys synthesizer</title>
+</head>
+
+<body>
+    <!-- code source: using Simo Edwin's udemy course project #1 Travelly as a template -->
+    <!-- SOURCE: https://www.macprovideo.com/course/volca-102-volca-keys-explored -->
+    <!-- TODO: see all the tuts - condense here - got lesson 5 underway -->
+    <!-- done: -->
+    <!-- TODO: adjust CSS for the new IDs created for each section; 
+                    the clouds aren't showing up and I could create flat minimalist gfx of volca keys
+                    made with affinity designer on ipad or mac; add the gfx to my portfolio on google drive -->
+    <!-- TODO: confirm how it looks on small devices and Firefox -->
+    <!-- TODO: try to get an easier-to-read font for the logo text -->
+    <!-- TODO: make sure whether anyone is using the name tinyguide.com and on social media platforms
+    and if it's available, get the domain and major socmed platforms reggied -->
+    <header class="main-head">
+        <nav>
+            <h1 id="logo"><a href="#start">TinyGuide: Volca Keys</a></h1>
+            <!-- if TinyGuide is taken, try HeidiGuides -->
+            <ul>
+                <li><a href="#play">Play</a></li>
+                <li><a href="#record">Record</a></li>
+                <li><a href="#more">More</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="start" class="hero">
+        <!-- TODO: use the iOS app that animates photos slightly, 
+        to make the background image more musical/energetic 
+    then maybe it's appropriate to stick with the nature photo theme -->
+        <h2>Use your Volca Keys right away</h2>
+        <h3>Get started now<br />and</br> keep going</h3>
+        <button>Sign up for TinyGuides news</button>
+    </section>
+
+    <section id="play">
+        <header class="locations-head">
+            <h2 class="main-title">Play real-time and saved patterns</h2>
+            <div class="play-wrapper">
+                <div>
+                    <h3>
+                        Once patterns are saved to a memory slot, press Memory + M1 through M8 to play them.
+                        You could 'perform' your song by recording up to 8 tracks and playing them live, one at a time,
+                        with optional real-time sound adjustments described throughout this TinyGuide.
+                    </h3>
+                </div>
+                <div>
+                    <h3>
+                        As the sequencer plays your saved pattern, a blinking red dot moves left to right to indicate
+                        the step
+                        in the sequence that is active
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- TODO: add step recording; find an easy source for how that's done -->
+            <!-- TODO: adjust CSS for the new IDs created for each section; 
+                                    the clouds aren't showing up and I could create flat minimalist gfx of volca keys
+                                    made with affinity designer on ipad or mac; add the gfx to my portfolio on google drive -->
+
+            <!-- note URLs to images have one period while two are needed in CSS -->
+            <!-- FIXME: animated parts not currently used 
+                    <img src="./img/jellyfish-single.png" class="moving-cloud-1 cloud" />
+                    <img src="./img/jellyfish-single.png" class="moving-cloud-2 cloud" />-->
+            <div class="inner-nav">
+                <ul>
+                    <li><a href="#adjust"><button>Adjustments</button></a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+    <section id="adjust">
+        <header class="locations-head adjust-head">
+            <h2 class="main-title">Adjust the sound</h2>
+            <h3>Applies to live playing, and adjusting the sound of saved patterns that are playing.</h3>
+            <div class="cards cards-with-bullets">
+                <!-- TODO: make these smaller -->
+                <!-- TODO: cards section could be buttons for other TinyGuides I've made -->
+                <!-- TODO: want to add h2 "More TinyGuides" but it screws up the formatting -->
+                <!-- TODO: make flat icons for these; add "coming soon" -->
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>Start Clean</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Set VCO and LFO sections knobs at zero
+                        </li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">VCF section all at mid-point</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Last section: Attack at zero; the others
+                            can be higher.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>Voice knob</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Try out Octave, Fifth, etc.</li>
+                        <!-- TODO: document what each is for, see udemy or google -->
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Poly mode enables chords</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>VCF</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">From tinny/airy to rich.</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Adjust Peak to hear its effect</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Revisit VCF section if you adjust LFO
+                            section</li>
+                    </ul>
+
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>LFO Rate</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Clockwise: adds repetition to notes held
+                        </li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Clean sound: this column all zero level
+                        </li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">At or near max: fatter sound</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Adjust Peak to hear its effect</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Revisit VCF section if you adjust LFO
+                            section</li>
+                    </ul>
+
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>LFO Pitch Int</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Changes dropoff of pitch while key held
+                            down</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Start at zero > increase slowly to gauge
+                            results</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Revisit Pitch Int if you change Rate</li>
+                    </ul>
+
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>LFO Cutoff Int</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Start at zero</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Increase to set dropoff of cutoff</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Revisit if you adjust Rate</li>
+                    </ul>
+
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>Delay Time & Feedback</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Purpose: delays output > space effect</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Delay Time: adjust for more or less dreamy
+                            sound</li>
+                    </ul>
+
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>Motion recording</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Allows recording new adjustments to a
+                            saved pattern</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">First save a pattern to a memory slot,
+                            then play it</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Hit Record (big dot) then make adjustments
+                            while sequencer continually plays</li>
+                    </ul>
+
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>Motion recording surprises</h4>
+                    <ul>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">While pattern is playing, adjustments may
+                            not fully affect recorded notes (usually) even though they're very noticeable when playing
+                            live</li>
+                        <li><img src="./icons/volume.svg" class="bullet-icon">Recording stops automatically after a
+                            short
+                            time; hit Record again if necessary and wait for the step you need to adjust</li>
+                    </ul>
+
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/volume.svg" alt="generic music icon">
+                    </div>
+                    <h4>One More Note</h4>
+                    <ul>
+                        <li>Not all adjustments are eligible for 'motion' recording in this manner.
+                            Results will vary, because the Volca tries to quantize or fit the adjustments to the steps
+                            of the
+                            sequencer;
+                            some subtle adjustments may be absent in the recording so
+                            you might need to repeat, to record the effect you want.</li>
+                        <li>Alternative: record to a computer to adjust a saved pattern in real time.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- TODO: document what each knob does; my EDM course might actually suffice or search google.
+                        This info might be better using the cards format below, too keep it organized visually. -->
+
+            <div class="inner-nav">
+                <ul>
+                    <li><a href="#play"><button>Return to Play</button></a></li>
+                </ul>
+            </div>
+            <!-- note URLs to images have one period while two are needed in CSS -->
+            <!-- animated parts not currently used 
+                    <img src="./img/jellyfish-single.png" class="moving-cloud-1 cloud" />
+                    <img src="./img/jellyfish-single.png" class="moving-cloud-2 cloud" /> -->
+        </header>
+    </section>
+    <section id="record">
+        <!-- this section uses flexbox to arrange icons and text boxes dynamically & resonsively -->
+        <!-- TODO: try grid layout instead, to be more precise and attractive -->
+        <header class="locations-head recording-head">
+            <!-- TODO: sketch a better layout:
+                            find illustrations for various ways to record, lower-priority details to one side -->
+            <h2>Real-time recording methods<br /></h2>
+            <h4>Record your tune to a memory slot then <a href="#save">save</a> for long-term storage.</h4>
+            <div class="recording-wrapper">
+                <!-- method 1 start -->
+                <div class="icon-wrapper">
+                    <img class="icon" src="./icons/record.svg" />
+                </div>
+                <div class="icon-label">
+                    <h3>New recording</h3>
+                </div>
+                <div class="detail">
+                    <!-- TODO: come up with a 2- or 3-column format like a big record button, 
+                                    and big lineart of the record and play buttons as they appear on a volca.
+                                    then right column would just be bullet points I think, maybe using music note as bullets 
+                                    cuz this section is too texty! -->
+                    <!-- TODO: details come in then disappear; 
+                                        a 'show details' button appears which would toggle details on or off with slight fade -->
+                    <h3>
+                        1) Choose memory slot, 2) Press Record, 3) Play pattern up to 16 steps.
+                        Sequencer continues looping and recording stays active.
+                    </h3>
+                </div>
+            </div><!-- method 1 end -->
+            <div class="recording-wrapper">
+                <!-- method 2 start -->
+                <div class="icon-wrapper">
+                    <img class="icon" src="./icons/play.svg" />
+                    <img class="icon" src="./icons/record.svg" />
+                </div>
+
+                <div class="icon-label">
+                    <h3>Add to stored pattern</h3>
+                </div>
+                <div class="detail">
+                    <h3>
+                        1) Choose memory slot, 2) Press Play then Record or both at same time, 3) What you play
+                        is recorded even while sequencer loops. New notes overwrite those in memory. Results may be
+                        unpredictable.
+                    </h3>
+                    <h3>
+                        Alternative: record live playing to a computer or mobile device through an audio interface, then
+                        arrange clips with DAW software.
+                    </h3>
+                </div>
+            </div><!-- end of method 2 -->
+            <div class="recording-wrapper">
+                <!-- how to stop -->
+                <div class="icon-wrapper">
+                    <img class="icon" src="./icons/record.svg" />
+                </div>
+                <div class="icon-label">
+                    <h3>Stop recording</h3>
+                </div>
+                <div class="detail">
+                    <h3>
+                        Record and Play buttons toggle on and off, so usually all you need to do is press Record to stop
+                        recording, or Play to stop
+                        everything.
+                    </h3>
+                </div>
+            </div><!-- stop method end -->
+            <div>
+                <div class="inner-nav">
+                    <ul>
+                        <li><a href="#save"><button>Save</button></a></li>
+                    </ul>
+                </div>
+
+                <!-- note URLs to images have one period while two are needed in CSS -->
+                <!-- TODO: change clouds to solo jellyfish floating around -->
+                <!-- TODO: change jellyfish to leaves or musical notes floating around -->
+                <!-- TODO: find out if the floaty items can be video; if so, animate the 
+                item slightly using the iOS app I've got for making hair whoosh and the like.
+            I'd like to have nature elements and people looking energized, not literally music instruments. -->
+
+
+                <!-- animated parts not currently in use<img src="./img/jellyfish-single.png" class="moving-cloud-1 cloud" />
+                <img src="./img/jellyfish-single.png" class="moving-cloud-2 cloud" /> -->
+                <!-- TODO: add a down arrow with pop up animated caption 'how to record with step editor'
+            then the section continues on another screenful (section); the step editing section has 
+            a button with up-arrow to 'return to live recording' -->
+            </div>
+        </header>
+
+    </section>
+
+    <section id="save">
+        <header class="locations-head save-head">
+            <h2>Save your pattern</h2><!-- FIXME: memory slots need to be addressed before or soon after Recording -->
+            <h4>Save a recording to memory</h4>
+            <div class="save-wrapper">
+                <div class="icon-wrapper">
+                    <img class="icon" src="./icons/musical-notes.svg" />
+                </div>
+                <div class="icon-label">
+                    <h3>Pick a memory slot</h3>
+                </div>
+                <div class="detail">
+                    <h3>
+                        Keys M1 through M8 correspond to 8 memory slots. Before creating a new pattern to record & save,
+                        listen to them all and pick one to record on.
+                    </h3>
+                </div>
+            </div>
+            <div class="save-wrapper">
+                <div class="icon-wrapper">
+                    <img class="icon" src="./icons/musical-notes.svg" />
+                </div>
+                <div class="icon-label">
+                    <h3>Save what's playing</h3>
+                </div>
+                <div class="detail">
+                    <h3>
+                        Hold Function + press Memory. Let go. Press the memory slot you want to save to, using keys M1
+                        through M8. Warning: listen to the stored patterns beforehand so you know which ones are
+                        available. The key that's blinking is the current memory slot that's playing now.
+                    </h3>
+                </div>
+            </div>
+            <div class="save-wrapper">
+                <div class="icon-wrapper">
+                    <img class="icon" src="./icons/musical-notes.svg" />
+                </div>
+                <div class="icon-label">
+                    <h3>Erase current memory slot</h3>
+                </div>
+                <div class="detail">
+                    <h3>Hold Function and press last key marked "All"</h3>
+                </div>
+            </div>
+            <!-- TODO: add step recording; find an easy source for how that's done -->
+            <!-- TODO: adjust CSS for the new IDs created for each section; 
+                        the clouds aren't showing up and I could create flat minimalist gfx of volca keys
+                        made with affinity designer on ipad or mac; add the gfx to my portfolio on google drive -->
+            <!-- note URLs to images have one period while two are needed in CSS -->
+            <!-- animated parts not currently used
+            <img src="./img/jellyfish-single.png" class="moving-cloud-1 cloud" />
+            <img src="./img/jellyfish-single.png" class="moving-cloud-2 cloud" /> -->
+        </header>
+    </section>
+
+    <section id="more">
+        <header class="locations-head more-head">
+            <h2>More tips</h2>
+
+            <!-- TODO: use this section to hold adjust, play, etc 
+            as an 'everything else' section that scrolls as long as needed -->
+            <!-- use buttons right at the start of this section and all remaining ones,
+             in a row to jump to these internal sections only, 
+            repeating at the header of each section -->
+
+
+            <div class="more-wrapper">
+                <div class="para1">
+                    <h3>
+                        Toggle metronome on/off: hold Function and press Metronome key
+                    </h3>
+                </div>
+            </div>
+            <div class="more-wrapper">
+                <div class="para2">
+                    <h3>
+                        Quantization: on by default, key presses are placed at the nearest step
+                    </h3>
+                </div>
+            </div>
+
+
+            <div class="inner-nav">
+                <ul>
+                    <li><a href="#coming-soon"><button>Other TinyGuides</button></a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+
+    <section id="about">
+        <header class="about-head">
+            <h2>The end</h2>
+            <h3>
+                This TinyGuide website gives you basic info, <br />
+                all in one page - no menu diving!
+            </h3>
+            <p>We're a game and graphics studio in Victoria, British Columbia.
+                Find our designs on YouTube, itch.io, GitHub,
+                and other places around the web. We love interactive technology, such as games that drive discussions
+                and improve
+                human connection.
+            </p>
+            <p>
+                We also love Instagram, and have a growing social media consultancy.
+                Thanks for stopping by and learning a bit about us. We love to hear from you now.
+                <!-- TODO: Send Comments line would probably require a button? or should it just be a news signup? -->
+                Send comments and inquiries.
+                <!-- a google form? or a formspree like used in the Edwin course? -->
+                <!-- TODO: call to action to sign up for email news per email course Jun -->
+                <!-- ie. do you like our creative and useful appraoch? If so, grab more of it - but what's the free gift? -->
+                <!-- free guide could be a PDF printable version of the info, created as a cheat sheet, and 
+                    when they sign up, they get assigned to a mailing list specific for that piece of gear.
+                    Then using Jun email techniques, I'd end up being able to send to some or all of my lists,
+                    and set mailchimp to remove duplicates.  
+                    -->
+            </p>
+
+            <a href="#contact"><button>Contact Us</button></a>
+        </header>
+    </section>
+
+    <section id="contact">
+        <div class="form-wrapper">
+            <header class="form-head">
+                <h2>Contact Us</h2>
+            </header>
+            <form>
+                <!-- add submit function using formspree.io as shown in lesson 42 -->
+                <div class="name-form">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="email-form">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required>
+                </div>
+                <button type="submit">Submit (UNDER CONSTRUCTION)</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-wrapper" id="coming-soon">
+            <h2>Coming soon:</h2>
+            <!-- TODO: coming soon belongs atop the JDXI
+            and "in development" for the PO-28 cuz I'll build that next -->
+            <div class="cards">
+                <!-- TODO: make these smaller -->
+                <!-- TODO: cards section could be buttons for other TinyGuides I've made -->
+                <!-- TODO: want to add h2 "More TinyGuides" but it screws up the formatting -->
+                <!-- TODO: make flat icons for these; add "coming soon" -->
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/synthesizer.png" alt="">
+                    </div>
+                    <h4>Volca Keys</h4>
+                    <p>Great little analogue synthesizer from Korg.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/music.png" alt="">
+                    </div>
+                    <h4>PO-28 Robot</h4>
+                    <p>Pocket Operator: tiny synthesizer with grand features.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="./icons/radio.png" alt="">
+                    </div>
+                    <h4>Roland JD-Xi</h4>
+                    <p>Workhorse-scale synthesizer in a small size.</p>
+                </div>
+            </div>
+            <h5>Bada Digital Marketing &copy; <script>
+                    document.write(new Date().getFullYear())
+                </script><br />
+                Icons by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com.</a><br />
+                Photos by amazing contributors at <a href="https://www.pixabay.com">Pixabay.</a>
+            </h5>
+
+            <ul>
+                <!-- TODO: insert my real youtube and twitter URLs, and create a better twitter name/username -->
+                <li><a href="https://www.instagram.com/heidiartgroove"><img src="./icons/instagram.svg"
+                            alt="Artist Heidi's Instagram URL"></a></li>
+                <li><a href="#"><img src="./icons/youtube.svg" alt=""></a></li>
+                <!-- TODO: see how my YT looks, if I have a computer tutor or other relevant channel -->
+                <li><a href="#"><img src="./icons/twitter.svg" alt=""></a></li>
+                <!-- TODO: probably substitute a FB page dedicated to my web projects (as opposed to art) -->
+            </ul>
+        </div>
+
+    </footer>
+</body>
+
+</html>

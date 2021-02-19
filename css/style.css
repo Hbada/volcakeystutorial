@@ -1,0 +1,752 @@
+/*******************/
+/* GLOBAL STYLES ***/
+/*******************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h2.interior-title {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+
+/* make bullet points retain h3 formatting */
+h3,
+h3 ul li {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h4,
+h5 {
+    font-size: 2.8rem;
+}
+
+a {
+    color: #fff;
+    /* all links on dark background */
+    text-decoration: none;
+    /* remove underline */
+}
+
+button {
+    padding: 2rem 6rem;
+    background: #4c6e97;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    /* cursor becomes pointer shape when over a button */
+    transition: background 0.5s ease-in-out;
+    /* transition specs for the button hover below */
+    /* call the animation declared later in CSS file */
+    animation: buttonAnimation 3s infinite alternate;
+    /* smooth and continuous animation */
+}
+
+button:hover {
+    background: #27394e;
+}
+
+/*************************/
+/* NAV SECTION WITH HERO */
+/*************************/
+
+.main-head {
+    color: #fff;
+    background: #131c27;
+    /* dark background => text in main head needs to be light */
+    /* format for sticky header follows */
+    position: sticky;
+    /* makes nav bar sticky so menu is available when further down page */
+    top: 0px;
+    /* with sticky setting, it keeps nav to the top of page */
+    z-index: 3;
+    /* makes sure nav is overtop of clouds or backgrounds in each section */
+}
+
+nav {
+    display: flex;
+    /* makes contents flow in a line */
+    width: 90%;
+    /* brings it away from side edges */
+    margin: auto;
+    /* centres the nav */
+    padding: 2rem;
+    /* keeps header to a good-looking 10vh min height */
+    min-height: 10vh;
+    /* decisive nav bar height; required for formatting that fills screen */
+    /* without a min-height, small browser window would squash the header badly */
+    align-items: center;
+    /* logo centred vertically */
+    flex-wrap: wrap;
+    /* adds wrapping needed for mobile browsers */
+}
+
+nav ul {
+    display: flex;
+    /* both the nav & UL need to be 'flex' */
+    flex: 2 1 40rem;
+    /* flex size (width) for nav items side of nav bar */
+    /* bigger flex grow here works best with lower number for #logo below */
+    /* flex grow = 1 is safe for both */
+    justify-content: space-around;
+    /* evenly spaced items within nav UL */
+    align-items: center;
+    /* nav links centred vertically */
+    list-style: none;
+    /* remove bullet points */
+}
+
+#logo {
+    flex: 1 1 40rem;
+    /* flex size (width) for logo/brand side of nav bar */
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 400;
+}
+
+.hero {
+    min-height: 100vh; /* template was 90vh */
+    /* hero section occupies 90% of screen; nav bar uses 10% */
+    background: linear-gradient(rgba(0, 0, 0, .7), transparent),
+        url('../img/plumage.jpg');
+    /* gradient lets text be more visible w/o covering whole photo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* zooms in so photo fills the container */
+    background-position: center;
+    /* many options available for what portion of photo to emphasize */
+    color: white;
+    display: flex;
+    /* gives flex abilities to the text or other contents */
+    flex-direction: column;
+    /* vertical flow unlike nav which is horizontal flow by default */
+    justify-content: center;
+    /* centre elements vertically as a block */
+    align-items: center;
+    /* centre elements horizontally */
+    text-align: center;
+    /* centre text within its container */
+}
+
+.hero h3 {
+    padding: 5rem;
+    /* give space above and below the middle item in hero section */
+}
+
+/**************************/
+/*** SECTION FORMATTING ***/
+/**************************/
+
+#adjust,
+#save,
+#play {
+    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .4)), url('../img/jellyfish.jpg');
+}
+
+
+#record,
+#adjust,
+#save,
+#play,
+#more,
+#coming-soon {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    /* add flexbox so we can move text from upper left default position */
+    display: flex;
+    align-items: center;
+    /* centre child items as a group vertically */
+    position: relative;
+    /* allows clouds to position within this section */
+
+    /* hide anything that animates out of the element's region */
+    overflow: hidden;
+    /* hide cloudAnimation outside the border */
+}
+
+/* make room for sticky header */
+
+#record h2, 
+.main-title, 
+#coming-soon h2 {
+    padding-top: 15vh;
+}
+
+/* TODO: move the sections into correct order since single-page sections were moved around */
+
+/**********/
+/*** PLAY SECTION ***/
+/***********/
+
+#play h3 {
+    padding: 3rem;
+}
+
+#play .play-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*******************/
+/*** RECORDING SECTION ***/
+/*************************/
+#record {
+    /* original background in template was light so it had a light gradient over it */
+/*background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .4)), url('../img/astronomy.jpg');*/
+background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url('../img/astronomy.jpg');
+color: white; /* when background is dark */
+background-size: cover;
+}
+
+#record h3 {
+    font-size: 1.8rem;
+}
+
+#record a {
+    color: lightblue;
+}
+
+.recording-wrapper {
+    display: flex; /* wrapper gets flex */
+    padding: 1rem; /* template was 2rem */
+    margin: auto;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: fit-content;
+}
+
+.icon-wrapper {
+    padding-right: 2rem; /* adds padding to the right of icon(s) */
+}
+
+.icon {
+    flex: 1 1;
+    height: 60px;
+    margin: auto;
+    /* move neighbours slightly right in case of multiple icons in a row */
+    padding-right: .5rem; 
+}
+
+/* not sure hte flexwrap stuff is working for mobile */
+
+.icon-label {
+    flex: 3 2 15rem;
+}
+
+.detail {
+    display: flex;
+    font-size: 2rem;
+    flex: 10 1 50rem;
+    align-items: center; /* vertically centres item to the previous child, I think */
+    margin: auto;
+}
+
+div.detail h3 {
+    padding: 1rem;
+}
+
+.recording-head h3 {
+    font-size: 2rem;
+    /* FIXME: font too big for this much info, so split into 2 or make whole site smaller font? */
+}
+
+.locations-head {
+    width: 90%;
+    /* make smaller flexbox than parent element */
+    margin: auto;
+    /* centres child item to create padding within #locations parent */
+}
+
+.recording-head h2 {
+    padding: 1rem 0rem;
+    /* padding above and below but flush left and right */
+}
+
+.recording-head h3 {
+    padding: 4rem 0rem;
+    /* gradient-filled text */
+    /* not currently used 
+    background: linear-gradient(#131c27, #663b34); */
+    background: white; /* template had gradient filled text; not used here because background is dark */
+    /* gradient to be applied to text area */
+    -webkit-background-clip: text;
+    /* applies the background to text space only */
+    -webkit-text-fill-color: transparent;
+    /* makes the text transparent so gradient shows */
+}
+
+.cloud {
+    position: absolute;
+    /* within the #locations section */
+    top: 0%;
+    right: 0%;
+}
+
+.moving-cloud-1 {
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+    height: 50rem;
+    opacity: .2;
+}
+
+.moving-cloud-2 {
+    height: 30rem;
+    top: 20%;
+    z-index: 0;
+    /* moves it behind .moving-cloud-1 */
+    opacity: 0.08;
+    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        background: lightblue;
+    }
+
+    25% {
+        background: rgb(35, 98, 119);
+    }
+
+    100% {
+        background: rgb(99, 35, 119);
+    }
+}
+
+@keyframes cloudAnimation {
+    from {
+        transform: translate(10%, -10%);
+    }
+
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+
+
+/**********************/
+/*** ADJUST SECTION ***/
+/**********************/
+.adjust-head li {
+    display: flex;
+}
+
+.adjust-head h3,
+.adjust-head ul li {
+    font-size: 2rem;
+    /* FIXME: default was 3rem but pushes header up under the sticky header */
+    /* could split this section into two and remove this size adjustment */
+    padding: 1rem 2rem;
+}
+
+.bullet-icon {
+    height: 32px;
+    padding: .5rem;
+    align-items: center; /* vertical align */
+}
+
+#adjust .cards-with-bullets {
+    align-items: start; /* keep icons in line at top edge of row */
+}
+
+#adjust .cards-with-bullets ul {
+    text-align: left;
+}
+
+
+
+#adjust .cards-with-bullets ul li {
+    font-size: 1.7rem;
+}
+
+#adjust .card li img {
+    /* makes img act like a bullet where 'list-style none' can't be revoked */
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+
+#adjust button {
+    margin-bottom: 5rem; /* manually create extra space even though it's a long section */
+}
+
+/********************/
+/*** SAVE SECTION ***/
+/********************/
+
+.save-wrapper {
+    display: flex; /* wrapper gets flex */
+    padding: 2rem;
+    margin: auto;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: fit-content;
+}
+
+.detail {
+    display: flex;
+    font-size: 2rem;
+    flex: 10 1 50rem;
+    align-items: center; /* vertically centres item to the previous child, I think */
+    margin: auto;
+}
+
+.save-head h3 {
+    font-size: 2rem;
+    /* FIXME: font too big for this much info, so split into 2 or make whole site smaller font? */
+}
+
+/**************/
+/*** MORE ***/
+/*************/
+
+#more {
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)), url('../img/shiny-leaf.jpg');
+    color: white;
+    background-size: cover;
+}
+#more .inner-nav {
+    /* styled after nav */
+    display: flex;
+    width: 90%;
+    /* brings it away from side edges */
+    margin: auto;
+    /* centres the nav */
+    padding: 2rem;
+    /* keeps header to a good-looking 10vh min height */
+    min-height: 10vh;
+    /* decisive nav bar height; required for formatting that fills screen */
+    /* without a min-height, small browser window would squash the header badly */
+    align-items: center;
+    /* logo centred vertically */
+    flex-wrap: wrap;
+    /* adds wrapping needed for mobile browsers */
+}
+
+/* set up More section with grid layout */
+#more .more-wrapper {
+    display: grid;
+    padding-top: 3rem;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: 
+        20rem 
+        20rem;
+    grid-gap: 7rem;
+    flex-direction: row;
+}
+
+/* set up child elements as boxes */
+.para1, 
+.para2 {
+    /* no 'box' styling at this time */
+}
+
+
+#record .inner-nav li,
+#more .inner-nav ul, 
+#play .inner-nav ul, 
+#adjust .inner-nav ul {
+    /* styled after nav ul */
+    display: flex;
+    /* both the nav & UL need to be 'flex' */
+    flex: 2 1 40rem;
+    /* flex size (width) for nav items side of nav bar */
+    /* bigger flex grow here works best with lower number for #logo below */
+    /* flex grow = 1 is safe for both */
+    justify-content: space-evenly;
+    /* evenly spaced items within nav UL */
+    align-items: center;
+    /* nav links centred vertically */
+    list-style: none;
+    /* remove bullet points */
+}
+
+/************************/
+/*** ABOUT & CONTACT SECTION ***/
+/************************/
+
+.about-head {
+    padding: 10vh 3rem 3rem 3rem;
+    /* explicit to accommodate sticky header's height */
+    /* padding: 3rem; WHEN NOT USING STICKY HEADER */
+    min-height: 3vh;
+    display: flex;
+    flex-direction: column;
+    color: violet;
+    text-align: center;
+}
+
+.about-head {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)),
+        url("../img/astronomy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-head h3 {
+    padding: 1rem;
+}
+
+
+/******************/
+/*** CONTACT ***/
+/****************/
+
+/* found in the About menu item to make nav bar simpler */
+
+#contact {
+    min-height: 100vh;
+    background: linear-gradient(rgba(150, 220, 240, .8), rgba(0,0,0, .8)),
+        url("../img/stones.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    background: rgba(19, 28, 39, .8);
+    width: 60%;
+    color: white;
+    border-radius: 20px;
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form,
+.email-form {
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label {
+    margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    border-bottom-left-radius: 20px;
+    /* makes curves match the container */
+    border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+    padding: 1rem 3rem;
+}
+
+/*****************/
+/*** OTHER TINY GUIDES ***/
+/*** INSIDE FOOTER ***/
+/*********************/
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 45vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    flex: 1 1 25rem;
+    min-height: 35vh;
+    margin: 2rem 3rem;
+    box-shadow: 0px 10px 10px rgba(255, 255, 255, .1), 0px 20px 20px rgba(255, 255, 255, .1);
+}
+
+.card-icon {
+    background: violet;
+}
+
+.card img {
+    max-width: 15%;
+    margin: 1rem;
+}
+
+.card h4,
+p {
+    padding: 2rem 2.5rem;
+}
+
+/**********************/
+/*** FOOTER ***********/
+/**********************/
+
+footer {
+    color: white;
+    background: rgba(19, 28, 39, 1);
+}
+
+.footer-wrapper {
+    display: flex;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    flex: 1 1 40rem;
+    font-size: 1.6rem;
+}
+
+footer h4 {
+    font-size: 2.2rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: lightblue;
+}
+
+
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+/* TODO: mobile devices need a lot of fixing */
+
+@media screen and (max-width: 1150px) {
+    li {
+        font-size: 1.7rem;
+        /* smaller font */
+    }
+}
+
+@media screen and (max-width: 932px) {
+
+    /* this is the width where nav items crows the nav bar */
+    html {
+        font-size: 45%;
+    }
+
+    nav {
+        text-align: center;
+        /* centre logo & nav links sections */
+    }
+
+    #logo {
+        padding: 1rem;
+    }
+
+    .cloud {
+        height: 40rem;
+        pointer-events: none;
+        /* prevents clicking and dragging the cloud(s) */
+    }
+
+    .moving-cloud-1 {
+        z-index: 0;
+        /* put a negative number here to push clouds behind text if needed */
+    }
+
+    .moving-cloud-2 {
+        display: none;
+        /* removes it cuz its top edge is visible in some mobile formats */
+    }
+
+    .recording-head h3,
+    .adjust-head h3,
+    .save-head h3,
+    .about-head h3 {
+        /* fix problem of black text on photo background 
+        given a gradient text fill not available in mobile browsers.
+        IF background is light, I don't need the gradient colour text fill, 
+        then it's a non-issue and this code block can be removed. */
+        /*background: rgba(12, 60, 0, .2);
+        -webkit-text-fill-color: white;*/
+    }
+
+    .adjust-head ul {
+        padding: 0 2rem;
+    }
+
+    #adjust .card {
+        min-width: 250px;
+    }
+
+
+    .form-wrapper {
+        width: 100%;
+    }
+
+ 
+    footer {
+        text-align: center;
+    }
+
+    footer h5 {
+        padding-bottom: 3rem;
+    }
+
+    footer .card {
+        min-height: 20vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #adjust .card {
+        width: 100%;
+        margin: auto 0;
+    }
+    .recording-wrapper,
+    .more-wrapper {
+        flex-direction: column;
+    }
+    
+}

@@ -35,7 +35,7 @@
             <!-- if TinyGuide is taken, try HeidiGuides -->
             <ul>
                 <li><a href="#play">Play</a></li>
-                <li><a href="#record">Record</a></li>
+                <li><a href="#save">Save</a></li>
                 <li><a href="#more">More</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
@@ -56,6 +56,9 @@
             <h2 class="main-title">Play real-time and saved patterns</h2>
             <div class="play-wrapper">
                 <div>
+                    <h3>
+                        <img class="icon" src="./icons/play.svg" />
+                    </h3>
                     <h3>
                         Once patterns are saved to a memory slot, press Memory + M1 through M8 to play them.
                         You could 'perform' your song by recording up to 8 tracks and playing them live, one at a time,
@@ -220,7 +223,7 @@
 
                 </div>
                 <div class="card">
-                    <div class="card-icon">
+                    <div class="card-icon last-icon">
                         <img src="./icons/volume.svg" alt="generic music icon">
                     </div>
                     <h4>One More Note</h4>
@@ -251,142 +254,82 @@
                     <img src="./img/jellyfish-single.png" class="moving-cloud-2 cloud" /> -->
         </header>
     </section>
-    <section id="record">
-        <!-- this section uses flexbox to arrange icons and text boxes dynamically & resonsively -->
-        <!-- TODO: try grid layout instead, to be more precise and attractive -->
-        <header class="locations-head recording-head">
-            <!-- TODO: sketch a better layout:
-                            find illustrations for various ways to record, lower-priority details to one side -->
-            <h2>Real-time recording methods<br /></h2>
-            <h4>Record your tune to a memory slot then <a href="#save">save</a> for long-term storage.</h4>
-            <div class="recording-wrapper">
-                <!-- method 1 start -->
-                <div class="icon-wrapper">
-                    <img class="icon" src="./icons/record.svg" />
-                </div>
-                <div class="icon-label">
-                    <h3>New recording</h3>
-                </div>
-                <div class="detail">
-                    <!-- TODO: come up with a 2- or 3-column format like a big record button, 
-                                    and big lineart of the record and play buttons as they appear on a volca.
-                                    then right column would just be bullet points I think, maybe using music note as bullets 
-                                    cuz this section is too texty! -->
-                    <!-- TODO: details come in then disappear; 
-                                        a 'show details' button appears which would toggle details on or off with slight fade -->
-                    <h3>
-                        1) Choose memory slot, 2) Press Record, 3) Play pattern up to 16 steps.
-                        Sequencer continues looping and recording stays active.
-                    </h3>
-                </div>
-            </div><!-- method 1 end -->
-            <div class="recording-wrapper">
-                <!-- method 2 start -->
-                <div class="icon-wrapper">
-                    <img class="icon" src="./icons/play.svg" />
-                    <img class="icon" src="./icons/record.svg" />
-                </div>
-
-                <div class="icon-label">
-                    <h3>Add to stored pattern</h3>
-                </div>
-                <div class="detail">
-                    <h3>
-                        1) Choose memory slot, 2) Press Play then Record or both at same time, 3) What you play
-                        is recorded even while sequencer loops. New notes overwrite those in memory. Results may be
-                        unpredictable.
-                    </h3>
-                    <h3>
-                        Alternative: record live playing to a computer or mobile device through an audio interface, then
-                        arrange clips with DAW software.
-                    </h3>
-                </div>
-            </div><!-- end of method 2 -->
-            <div class="recording-wrapper">
-                <!-- how to stop -->
-                <div class="icon-wrapper">
-                    <img class="icon" src="./icons/record.svg" />
-                </div>
-                <div class="icon-label">
-                    <h3>Stop recording</h3>
-                </div>
-                <div class="detail">
-                    <h3>
-                        Record and Play buttons toggle on and off, so usually all you need to do is press Record to stop
-                        recording, or Play to stop
-                        everything.
-                    </h3>
-                </div>
-            </div><!-- stop method end -->
-            <div>
-                <div class="inner-nav">
-                    <ul>
-                        <li><a href="#save"><button>Save</button></a></li>
-                    </ul>
-                </div>
-
-                <!-- note URLs to images have one period while two are needed in CSS -->
-                <!-- TODO: change clouds to solo jellyfish floating around -->
-                <!-- TODO: change jellyfish to leaves or musical notes floating around -->
-                <!-- TODO: find out if the floaty items can be video; if so, animate the 
-                item slightly using the iOS app I've got for making hair whoosh and the like.
-            I'd like to have nature elements and people looking energized, not literally music instruments. -->
-
-
-                <!-- animated parts not currently in use<img src="./img/jellyfish-single.png" class="moving-cloud-1 cloud" />
-                <img src="./img/jellyfish-single.png" class="moving-cloud-2 cloud" /> -->
-                <!-- TODO: add a down arrow with pop up animated caption 'how to record with step editor'
-            then the section continues on another screenful (section); the step editing section has 
-            a button with up-arrow to 'return to live recording' -->
-            </div>
-        </header>
-
-    </section>
 
     <section id="save">
         <header class="locations-head save-head">
-            <h2>Save your pattern</h2><!-- FIXME: memory slots need to be addressed before or soon after Recording -->
-            <h4>Save a recording to memory</h4>
+            <h2>Save your pattern</h2>
+            <h4>Using memory slots</h4>
             <div class="save-wrapper">
-                <div class="icon-wrapper">
-                    <img class="icon" src="./icons/musical-notes.svg" />
+                <div class="music-icon1 box-grid icon-wrapper"><img class="icon" src="./icons/musical-notes.svg" /></div>
+                <div class="music-icon2 box-grid icon-wrapper"><img class="icon" src="./icons/musical-notes.svg" /></div>
+                <div class="music-icon3 box-grid icon-wrapper"><img class="icon" src="./icons/musical-notes.svg" /></div>
+                <div class="record-icon1 box-grid icon-wrapper"><img class="icon" src="./icons/record.svg" /></div>
+                <div class="record-icon2 box-grid icon-wrapper"><img class="icon" src="./icons/record.svg" /></div>
+                <div class="save1 box-grid">
+                    <div class="icon-label">
+                        <h3>Examine memory</h3>
+                    </div>
+                    <div class="detail">
+                        <h3>
+                            Keys M1 through M8 correspond to 8 memory slots. Before creating a new pattern to record &
+                            save,
+                            listen to them all and pick one to record on.
+                        </h3>
+                    </div>
                 </div>
-                <div class="icon-label">
-                    <h3>Pick a memory slot</h3>
+                <div class="save2 box-grid">
+                    <div class="icon-label">
+                        <h3>Pick a slot </h3>
+                    </div>
+                    <div class="detail">
+                        <h3>
+                            Hold Function + press Memory. Let go. Press the memory slot you want to save to, using keys
+                            M1
+                            through M8. The key that's consistently blinking indicates the current memory slot that's
+                            playing now,
+                            if the sequencer is playing.
+                        </h3>
+                    </div>
                 </div>
-                <div class="detail">
-                    <h3>
-                        Keys M1 through M8 correspond to 8 memory slots. Before creating a new pattern to record & save,
-                        listen to them all and pick one to record on.
-                    </h3>
+                <div class="save3 box-grid">
+                    
+                    <div class="icon-label">
+                        <h3>Start recording</h3>
+                    </div>
+                    <div class="detail">
+                        <h3>
+                            While sequencer not running, press Record, and play the pattern up to 16 steps.
+                            Sequencer continues looping and recording stays active.
+                        <br /><br />Or, while sequencer playing, hit Play then Record or both at same time, then what you play
+                            will be recorded even while sequencer loops. New notes overwrite those in memory. Results
+                            may be
+                            unpredictable.</h3>
+                    </div>
+                </div>
+                <div class="save4 box-grid">
+                    <div class="icon-label">
+                        <h3>Stop recording</h3>
+                    </div>
+                    <div class="detail">
+                        <h3>
+                            Record and Play buttons toggle on and off, so usually all you need to do is press Record to
+                            stop
+                            recording, or Play to stop everything.
+                        </h3>
+                    </div>
+                </div>
+                <div class="save5 box-grid">
+                    <div class="icon-label">
+                        <h3>Erase slot</h3>
+                    </div>
+                    <div class="detail">
+                        <h3>Hold Function and press last key marked "All"</h3>
+                    </div>
                 </div>
             </div>
-            <div class="save-wrapper">
-                <div class="icon-wrapper">
-                    <img class="icon" src="./icons/musical-notes.svg" />
-                </div>
-                <div class="icon-label">
-                    <h3>Save what's playing</h3>
-                </div>
-                <div class="detail">
-                    <h3>
-                        Hold Function + press Memory. Let go. Press the memory slot you want to save to, using keys M1
-                        through M8. Warning: listen to the stored patterns beforehand so you know which ones are
-                        available. The key that's blinking is the current memory slot that's playing now.
-                    </h3>
-                </div>
-            </div>
-            <div class="save-wrapper">
-                <div class="icon-wrapper">
-                    <img class="icon" src="./icons/musical-notes.svg" />
-                </div>
-                <div class="icon-label">
-                    <h3>Erase current memory slot</h3>
-                </div>
-                <div class="detail">
-                    <h3>Hold Function and press last key marked "All"</h3>
-                </div>
-            </div>
+
+
+
             <!-- TODO: add step recording; find an easy source for how that's done -->
             <!-- TODO: adjust CSS for the new IDs created for each section; 
                         the clouds aren't showing up and I could create flat minimalist gfx of volca keys
@@ -401,14 +344,6 @@
     <section id="more">
         <header class="locations-head more-head">
             <h2>More tips</h2>
-
-            <!-- TODO: use this section to hold adjust, play, etc 
-            as an 'everything else' section that scrolls as long as needed -->
-            <!-- use buttons right at the start of this section and all remaining ones,
-             in a row to jump to these internal sections only, 
-            repeating at the header of each section -->
-
-
             <div class="more-wrapper">
                 <div class="para1 box-grid">
                     <h3>
@@ -424,7 +359,13 @@
                 </div>
                 <div class="box-grid para3">
                     <h3>
-
+                        Recording live performance: <br />
+                        Recording to the built-in sequencer can produce strange results. And it doesn't suit continuous
+                        longer sequences.
+                        Record live playing and adjustments in real-time
+                        using an audio interface (AI) connected to desktop or mobile device.
+                        Use mono cable (not stereo) to the mono inputs of the AI.
+                        Then arrange clips with DAW software.
                     </h3>
                 </div>
                 <div class="box-grid para4">

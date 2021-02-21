@@ -46,6 +46,11 @@ h3 ul li {
     font-weight: normal;
 }
 
+#play h3,
+#adjust h3 {
+    padding: 3rem 0; /* space out paragraphs without indenting */
+}
+
 h4,
 h5 {
     font-size: 2.8rem;
@@ -175,7 +180,6 @@ nav ul {
 }
 
 
-#record,
 #adjust,
 #save,
 #play,
@@ -199,8 +203,8 @@ nav ul {
 
 /* make room for sticky header */
 
-#record h2,
 .main-title,
+#save h2,
 #coming-soon h2,
 #more h2 {
     padding-top: 15vh;
@@ -212,10 +216,6 @@ nav ul {
 /*** PLAY SECTION ***/
 /***********/
 
-#play h3 {
-    padding: 3rem;
-}
-
 #play .play-wrapper {
     display: flex;
     flex-direction: column;
@@ -223,36 +223,9 @@ nav ul {
 
 
 /*******************/
-/*** RECORDING SECTION ***/
+/*** RECORDING SECTION - NO LONGER EXISTS ***/
 /*************************/
-#record {
-    /* original background in template was light so it had a light gradient over it */
-    /*background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .4)), url('../img/astronomy.jpg');*/
-    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url('../img/astronomy.jpg');
-    color: white;
-    /* when background is dark */
-    background-size: cover;
-}
 
-#record h3 {
-    font-size: 1.8rem;
-}
-
-#record a {
-    color: lightblue;
-}
-
-.recording-wrapper {
-    display: flex;
-    /* wrapper gets flex */
-    padding: 1rem;
-    /* template was 2rem */
-    margin: auto;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    height: fit-content;
-}
 
 .icon-wrapper {
     padding-right: 2rem;
@@ -282,39 +255,11 @@ nav ul {
     margin: auto;
 }
 
-div.detail h3 {
-    padding: 1rem;
-}
-
-.recording-head h3 {
-    font-size: 2rem;
-    /* FIXME: font too big for this much info, so split into 2 or make whole site smaller font? */
-}
-
 .locations-head {
     width: 90%;
     /* make smaller flexbox than parent element */
     margin: auto;
     /* centres child item to create padding within #locations parent */
-}
-
-.recording-head h2 {
-    padding: 1rem 0rem;
-    /* padding above and below but flush left and right */
-}
-
-.recording-head h3 {
-    padding: 4rem 0rem;
-    /* gradient-filled text */
-    /* not currently used 
-    background: linear-gradient(#131c27, #663b34); */
-    background: white;
-    /* template had gradient filled text; not used here because background is dark */
-    /* gradient to be applied to text area */
-    -webkit-background-clip: text;
-    /* applies the background to text space only */
-    -webkit-text-fill-color: transparent;
-    /* makes the text transparent so gradient shows */
 }
 
 .cloud {
@@ -381,6 +326,10 @@ div.detail h3 {
     padding: 1rem 2rem;
 }
 
+#adjust img {
+    max-height: 50px;
+}
+
 .bullet-icon {
     height: 32px;
     padding: .5rem;
@@ -420,28 +369,76 @@ div.detail h3 {
 /********************/
 
 .save-wrapper {
-    display: flex;
-    /* wrapper gets flex */
-    padding: 2rem;
-    margin: auto;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    height: fit-content;
+    display: grid;
+    grid-template-columns: 7rem 1fr 7rem 1fr;
+    grid-template-rows: 
+        27rem 
+        18rem
+        30rem;
+    grid-template-areas: 
+        "music-icon1    save1  music-icon3   save2"
+        "record-icon1   save3  record-icon2  save4"
+        ".             save3  music-icon2  save5";
+    flex-direction: column;
+    grid-gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.detail {
-    display: flex;
-    font-size: 2rem;
-    flex: 10 1 50rem;
-    align-items: center;
-    /* vertically centres item to the previous child, I think */
-    margin: auto;
+#save .box-grid {
+    padding-top: 4rem;
 }
 
-.save-head h3 {
-    font-size: 2rem;
-    /* FIXME: font too big for this much info, so split into 2 or make whole site smaller font? */
+.music-icon1 {
+    grid-area: music-icon1;
+    align-self: top;
+    padding-left: 5px;
+}
+
+.music-icon2 {
+    grid-area: music-icon2;
+    align-self: top;
+    padding-left: 5px;
+}
+
+.music-icon3 {
+    grid-area: music-icon3;
+    align-self: top;
+    padding-left: 5px;
+}
+
+.record-icon1 {
+    grid-area: record-icon1;
+    align-self: top;
+    padding-left: 5px;
+}
+
+.record-icon2 {
+    grid-area: record-icon2;
+    align-self: top;
+    padding-left: 5px;
+}
+.save1 {
+    grid-area: save1;
+}
+
+.save2 {
+    grid-area: save2;
+}
+
+.save3 {
+    grid-area: save3;
+}
+
+.save4 {
+    grid-area: save4;
+}
+
+.save5 {
+    grid-area: save5;
+}
+
+#save div.detail h3 {
+    font-size: 1.8rem;
 }
 
 /**************/
@@ -454,24 +451,6 @@ div.detail h3 {
     background-size: cover;
 }
 
-/* button(s) at bottom */
-#more .inner-nav {
-    /* styled after nav */
-    display: flex;
-    width: 90%;
-    /* brings it away from side edges */
-    margin: auto;
-    /* centres the nav */
-    padding: 2rem;
-    /* keeps header to a good-looking 10vh min height */
-    min-height: 10vh;
-    /* decisive nav bar height; required for formatting that fills screen */
-    /* without a min-height, small browser window would squash the header badly */
-    align-items: center;
-    /* logo centred vertically */
-    flex-wrap: wrap;
-    /* adds wrapping needed for mobile browsers */
-}
 
 /* set up paragraphs with grid layout */
 .more-wrapper {
@@ -483,14 +462,14 @@ div.detail h3 {
         30rem;
     grid-template-areas: 
         "para1 para2"
-        "para3 para4";
+        "para3 para3";
     flex-direction: column;
     grid-gap: 1rem;
 }
 
 /* set up child elements as boxes */
-.box-grid {
-    padding: 2rem;
+#more .box-grid {
+    padding: 2rem 0;
 }
 
 .para1 {
@@ -510,7 +489,6 @@ div.detail h3 {
 }
 
 
-#record .inner-nav li,
 #more .inner-nav ul,
 #play .inner-nav ul,
 #adjust .inner-nav ul {
@@ -527,6 +505,25 @@ div.detail h3 {
     /* nav links centred vertically */
     list-style: none;
     /* remove bullet points */
+}
+
+/* button(s) at bottom */
+#more .inner-nav {
+    /* styled after nav */
+    display: flex;
+    width: 90%;
+    /* brings it away from side edges */
+    margin: auto;
+    /* centres the nav */
+    padding: 2rem;
+    /* keeps header to a good-looking 10vh min height */
+    min-height: 10vh;
+    /* decisive nav bar height; required for formatting that fills screen */
+    /* without a min-height, small browser window would squash the header badly */
+    align-items: center;
+    /* logo centred vertically */
+    flex-wrap: wrap;
+    /* adds wrapping needed for mobile browsers */
 }
 
 /************************/
@@ -748,7 +745,6 @@ footer a {
         /* removes it cuz its top edge is visible in some mobile formats */
     }
 
-    .recording-head h3,
     .adjust-head h3,
     .save-head h3,
     .about-head h3 {
@@ -758,6 +754,11 @@ footer a {
         then it's a non-issue and this code block can be removed. */
         /*background: rgba(12, 60, 0, .2);
         -webkit-text-fill-color: white;*/
+    }
+    
+    .icon {
+        height: 45px;
+        /* move neighbours slightly right in case of multiple icons in a row */
     }
 
     .adjust-head ul {

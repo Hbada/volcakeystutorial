@@ -162,6 +162,8 @@ nav ul {
     /* centre elements horizontally */
     text-align: center;
     /* centre text within its container */
+    margin: auto;
+    /* centres child item to create padding within #locations parent */
 }
 
 .hero h3 {
@@ -182,48 +184,47 @@ nav ul {
 
 #adjust,
 #save,
-#play,
-#more,
 #coming-soon {
     min-height: 100vh;
     background-size: cover;
     background-position: center;
-
     /* add flexbox so we can move text from upper left default position */
     display: flex;
     align-items: center;
     /* centre child items as a group vertically */
-    position: relative;
+    /* position: relative; */
     /* allows clouds to position within this section */
-
-    /* hide anything that animates out of the element's region */
-    overflow: hidden;
-    /* hide cloudAnimation outside the border */
 }
 
 /* make room for sticky header */
 
-.main-title,
-#save h2,
-#coming-soon h2,
-#more h2 {
+.main-title {
     padding-top: 15vh;
 }
-
-/* TODO: move the sections into correct order since single-page sections were moved around */
 
 /**********/
 /*** PLAY SECTION ***/
 /***********/
+
+.play-head {
+    width: 90%;
+    /* make smaller flexbox than parent element */
+    margin: auto;
+    /* centres child item to create padding within #locations parent */
+    min-height: 100vh;
+}
 
 #play .play-wrapper {
     display: flex;
     flex-direction: column;
 }
 
+#play h3 {
+    font-size: 2.2rem;
+}
 
 /*******************/
-/*** RECORDING SECTION - NO LONGER EXISTS ***/
+/*** ICONS ORIGINALLY FOUND IN RECORDING SECTION ***/
 /*************************/
 
 
@@ -255,13 +256,6 @@ nav ul {
     margin: auto;
 }
 
-.locations-head {
-    width: 90%;
-    /* make smaller flexbox than parent element */
-    margin: auto;
-    /* centres child item to create padding within #locations parent */
-}
-
 @keyframes buttonAnimation {
     0% {
         background: lightblue;
@@ -280,6 +274,11 @@ nav ul {
 /**********************/
 /*** ADJUST SECTION ***/
 /**********************/
+.adjust-head {
+    width: 90%;
+    margin: auto;
+}
+
 .adjust-head li {
     display: flex;
 }
@@ -290,6 +289,10 @@ nav ul {
     /* FIXME: default was 3rem but pushes header up under the sticky header */
     /* could split this section into two and remove this size adjustment */
     padding: 1rem 2rem;
+    width: 90%;
+    /* make smaller flexbox than parent element */
+    margin: auto;
+    /* centres child item to create padding within #locations parent */
 }
 
 #adjust img {
@@ -333,6 +336,12 @@ nav ul {
 /********************/
 /*** SAVE SECTION ***/
 /********************/
+.save-head {
+    width: 90%;
+    /* make smaller flexbox than parent element */
+    margin: auto;
+    /* centres child item to create padding within #locations parent */
+}
 
 .save-wrapper {
     display: grid;
@@ -417,9 +426,17 @@ nav ul {
     background-size: cover;
 }
 
+.more-head {
+    width: 90%;
+    /* make smaller flexbox than parent element */
+    margin: auto;
+    /* centres child item to create padding within #locations parent */
+    padding: 15vh 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
+    min-height: 100vh;
+}
+
 /* set up paragraphs with grid layout */
 .more-wrapper {
-    padding-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 
@@ -429,11 +446,11 @@ nav ul {
         "para1 para2"
         "para3 para3";
     flex-direction: column;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
 }
 
 #more h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 /* set up child elements as boxes */
 #more .box-grid {
@@ -501,28 +518,31 @@ nav ul {
 /************************/
 
 .about-head {
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)),
         url("../img/astronomy.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
     color: violet;
-    padding: 15vh 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
+    padding: 0 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
 }
 
 .about-wrapper {
+    width: 90%;
     padding-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 
-        8rem 
+        12rem 
         30rem;
     grid-template-areas: 
         "about1 about1"
         "about2 about3";
     flex-direction: column;
-    grid-gap: 1rem;
+    grid-gap: 2.5rem;
 }
+
+
 
 /* About Section boxes */
 
@@ -622,8 +642,7 @@ nav ul {
     margin: 1rem;
 }
 
-.card h4,
-p {
+.card h4 {
     padding: 2rem 2.5rem;
 }
 
@@ -742,14 +761,19 @@ footer a {
 @media screen and (max-width: 673px) {
     .more-wrapper {
         grid-template-rows: 
-            15rem 
-            18rem;
+            10rem 
+            12rem
+            33rem;
+        grid-template-areas:
+            "para1 para1"
+            "para2 para2"
+            "para3 para3";
     }
 
     .about-wrapper {
         grid-template-rows: 
-            8rem 
-            20rem
+            12rem 
+            18rem
             17rem;
         grid-template-areas: 
             "about1 about1"
@@ -766,10 +790,6 @@ footer a {
 
     .recording-wrapper {
         flex-direction: column;
-    }
-
-    .about-wrapper {
-        /* flex-direction: row; */
     }
     
 }

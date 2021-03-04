@@ -262,13 +262,6 @@ nav ul {
     /* centres child item to create padding within #locations parent */
 }
 
-.cloud {
-    position: absolute;
-    /* within the #locations section */
-    top: 0%;
-    right: 0%;
-}
-
 @keyframes buttonAnimation {
     0% {
         background: lightblue;
@@ -424,7 +417,6 @@ nav ul {
     background-size: cover;
 }
 
-
 /* set up paragraphs with grid layout */
 .more-wrapper {
     padding-top: 2rem;
@@ -467,7 +459,8 @@ nav ul {
 
 #more .inner-nav ul,
 #play .inner-nav ul,
-#adjust .inner-nav ul {
+#adjust .inner-nav ul,
+#about .inner-nav ul {
     /* styled after nav ul */
     display: flex;
     /* both the nav & UL need to be 'flex' */
@@ -484,7 +477,8 @@ nav ul {
 }
 
 /* button(s) at bottom */
-#more .inner-nav {
+#more .inner-nav,
+#about .inner-nav {
     /* styled after nav */
     display: flex;
     width: 90%;
@@ -770,7 +764,8 @@ footer a {
     }
 
     .about-wrapper {
-        grid-template-columns: 1fr;
+        flex-direction: row;
+        /* grid-template-columns: 1fr;
         grid-template-rows: 
             8rem 
             20rem
@@ -778,7 +773,7 @@ footer a {
         grid-template-areas: 
             "about1"
             "about2"
-            "about3";
+            "about3"; */
     }
     
 }

@@ -769,9 +769,6 @@ footer a {
             "music-icon1    save1  music-icon3   save2"
             "record-icon1   save3  record-icon2  save4"
             ".             save3  music-icon2  save5";
-        flex-direction: column;
-        grid-gap: 1rem;
-        flex-wrap: wrap;
     }
 
     .more-wrapper {
@@ -807,4 +804,21 @@ footer a {
         flex-direction: column;
     }
     
+    .save-wrapper {
+        grid-template-columns: 7rem 1fr;
+        grid-template-rows: 
+            27rem 
+            27rem
+            18rem
+            18rem
+            30rem
+            30rem;
+        grid-template-areas: 
+            "music-icon1    save1"  
+            "music-icon3   save2"
+            "record-icon1   save3"
+            "record-icon2  save4"
+            ".             save3"  
+            "music-icon2  save5";
+    }
 }

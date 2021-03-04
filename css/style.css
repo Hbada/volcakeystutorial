@@ -544,9 +544,6 @@ nav ul {
     grid-area: about3;
 }
 
-.about4 {
-    grid-area: about4;
-}
 
 /******************/
 /*** CONTACT ***/
@@ -754,9 +751,12 @@ footer a {
         grid-template-rows: 
             15rem 
             18rem;
-        grid-template-areas: 
-            "para1 para2"
-            "para3 para3";
+    }
+
+    .about-wrapper {
+        grid-template-rows: 
+            8rem 
+            35rem;
     }
 }
 
@@ -766,9 +766,20 @@ footer a {
         margin: auto 0;
     }
 
-    .recording-wrapper, {
+    .recording-wrapper {
         flex-direction: column;
     }
 
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+            8rem 
+            20rem
+            20rem;
+        grid-template-areas: 
+            "about1"
+            "about2"
+            "about3";
+    }
     
 }

@@ -427,12 +427,12 @@ nav ul {
 }
 
 .more-head {
+    min-height: 100vh;
     width: 90%;
     /* make smaller flexbox than parent element */
     margin: auto;
     /* centres child item to create padding within #locations parent */
-    padding: 15vh 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
-    min-height: 100vh;
+    padding: 0 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
 }
 
 /* set up paragraphs with grid layout */

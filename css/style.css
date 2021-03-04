@@ -749,7 +749,12 @@ footer a {
     .about-wrapper {
         grid-template-rows: 
             8rem 
-            50rem;
+            20rem
+            17rem;
+        grid-template-areas: 
+            "about1 about1"
+            "about2 about2"
+            "about3 about3";
     }
 }
 

@@ -677,7 +677,6 @@ footer a {
 /*********************/
 /*** MEDIA QUERIES ***/
 /*********************/
-/* TODO: mobile devices need a lot of fixing */
 
 @media screen and (max-width: 1150px) {
     li {
@@ -756,7 +755,7 @@ footer a {
     .about-wrapper {
         grid-template-rows: 
             8rem 
-            35rem;
+            45rem;
     }
 }
 

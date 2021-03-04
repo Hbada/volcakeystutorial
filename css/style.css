@@ -269,21 +269,6 @@ nav ul {
     right: 0%;
 }
 
-.moving-cloud-1 {
-    animation: cloudAnimation 3s infinite alternate ease-in-out;
-    height: 50rem;
-    opacity: .2;
-}
-
-.moving-cloud-2 {
-    height: 30rem;
-    top: 20%;
-    z-index: 0;
-    /* moves it behind .moving-cloud-1 */
-    opacity: 0.08;
-    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
-}
-
 @keyframes buttonAnimation {
     0% {
         background: lightblue;
@@ -297,18 +282,6 @@ nav ul {
         background: rgb(99, 35, 119);
     }
 }
-
-@keyframes cloudAnimation {
-    from {
-        transform: translate(10%, -10%);
-    }
-
-    to {
-        transform: translate(0%, 0%);
-    }
-}
-
-
 
 
 /**********************/
@@ -458,8 +431,8 @@ nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 
-        30rem 
-        30rem;
+        15rem 
+        25rem;
     grid-template-areas: 
         "para1 para2"
         "para3 para3";
@@ -467,6 +440,9 @@ nav ul {
     grid-gap: 1rem;
 }
 
+#more h3 {
+    font-size: 2rem;
+}
 /* set up child elements as boxes */
 #more .box-grid {
     padding: 2rem 0;
@@ -729,22 +705,6 @@ footer a {
         padding: 1rem;
     }
 
-    .cloud {
-        height: 40rem;
-        pointer-events: none;
-        /* prevents clicking and dragging the cloud(s) */
-    }
-
-    .moving-cloud-1 {
-        z-index: 0;
-        /* put a negative number here to push clouds behind text if needed */
-    }
-
-    .moving-cloud-2 {
-        display: none;
-        /* removes it cuz its top edge is visible in some mobile formats */
-    }
-
     .adjust-head h3,
     .save-head h3,
     .about-head h3 {
@@ -786,6 +746,18 @@ footer a {
     footer .card {
         min-height: 20vh;
     }
+    
+}
+
+@media screen and (max-width: 673px) {
+    .more-wrapper {
+        grid-template-rows: 
+            15rem 
+            18rem;
+        grid-template-areas: 
+            "para1 para2"
+            "para3 para3";
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -798,4 +770,5 @@ footer a {
         flex-direction: column;
     }
 
+    
 }

@@ -760,15 +760,10 @@ footer a {
 
 @media screen and (max-width: 673px) {
     .save-wrapper {
-        grid-template-columns: 7rem 1fr 7rem 1fr;
         grid-template-rows: 
             33rem 
             22rem
             30rem;
-        grid-template-areas: 
-            "music-icon1    save1  music-icon3   save2"
-            "record-icon1   save3  record-icon2  save4"
-            ".             save3  music-icon2  save5";
     }
 
     .more-wrapper {
@@ -804,21 +799,22 @@ footer a {
         flex-direction: column;
     }
     
+    .icon {
+        height: 25px;
+    }
     .save-wrapper {
-        grid-template-columns: 7rem 1fr;
+        grid-template-columns: 4rem 1fr;
         grid-template-rows: 
-            27rem 
-            27rem
+            22rem 
+            24rem
+            37rem
             18rem
-            18rem
-            30rem
-            30rem;
+            20rem;
         grid-template-areas: 
             "music-icon1    save1"  
-            "music-icon3   save2"
+            "music-icon2    save2"
             "record-icon1   save3"
-            "record-icon2  save4"
-            ".             save3"  
-            "music-icon2  save5";
+            "record-icon2   save4"
+            "music-icon3    save5";
     }
 }

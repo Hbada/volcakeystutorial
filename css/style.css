@@ -749,7 +749,7 @@ footer a {
     .about-wrapper {
         grid-template-rows: 
             8rem 
-            45rem;
+            50rem;
     }
 }
 
@@ -764,16 +764,7 @@ footer a {
     }
 
     .about-wrapper {
-        flex-direction: row;
-        /* grid-template-columns: 1fr;
-        grid-template-rows: 
-            8rem 
-            20rem
-            20rem;
-        grid-template-areas: 
-            "about1"
-            "about2"
-            "about3"; */
+        /* flex-direction: row; */
     }
     
 }

@@ -1,6 +1,6 @@
-/*******************/
-/* GLOBAL STYLES ***/
-/*******************/
+/************/
+/*** TEXT ***/
+/************/
 
 * {
     padding: 0;
@@ -46,11 +46,6 @@ h3 ul li {
     font-weight: normal;
 }
 
-#play h3,
-#adjust h3 {
-    padding: 3rem 0; /* space out paragraphs without indenting */
-}
-
 h4,
 h5 {
     font-size: 2.8rem;
@@ -62,6 +57,18 @@ a {
     text-decoration: none;
     /* remove underline */
 }
+
+/************/
+/*** PADDING ***/
+/***************/
+#play h3,
+#adjust h3 {
+    padding: 3rem 0; /* space out paragraphs without indenting */
+}
+
+/***************/
+/*** BUTTONS ***/
+/***************/
 
 button {
     padding: 2rem 6rem;
@@ -80,6 +87,47 @@ button {
 
 button:hover {
     background: #27394e;
+}
+
+/*************/
+/*** CARDS ***/
+/*************/
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 45vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    flex: 1 1 25rem;
+    min-height: 35vh;
+    margin: 2rem 3rem;
+}
+
+.card {
+    box-shadow: 0px 10px 10px rgba(0, 0, 255, .1), 0px 20px 20px rgba(255, 255, 255, .1);
+}
+
+.card-dark {
+    box-shadow: 0px 10px 10px rgba(40, 40, 10, .6), 0px 20px 20px rgba(255, 255, 255, .1);
+}
+
+.card-icon {
+    background: violet;
+}
+
+.card img {
+    max-width: 15%;
+    margin: 1rem;
+}
+
+.card h4 {
+    padding: 2rem 2.5rem;
 }
 
 /*************************/
@@ -135,7 +183,7 @@ nav ul {
 #logo {
     flex: 1 1 40rem;
     /* flex size (width) for logo/brand side of nav bar */
-    font-family: 'Pattaya', sans-serif;
+    font-family: 'Norwester', sans-serif;
     font-weight: 400;
 }
 
@@ -143,15 +191,16 @@ nav ul {
     min-height: 100vh;
     /* template was 90vh */
     /* hero section occupies 90% of screen; nav bar uses 10% */
-    background: linear-gradient(rgba(0, 0, 0, .7), transparent),
-        url('../img/plumage.jpg');
+    /* background: linear-gradient(rgba(0, 0, 0, .7), transparent),
+        url('../img/volca-keys-home.jpg'); */
+        background: linear-gradient(rgba(218,165,32, .5), transparent);
     /* gradient lets text be more visible w/o covering whole photo */
     background-repeat: no-repeat;
     background-size: cover;
-    /* zooms in so photo fills the container */
+    /* cover zooms in so photo fills the container */
     background-position: center;
     /* many options available for what portion of photo to emphasize */
-    color: white;
+    color: black;
     display: flex;
     /* gives flex abilities to the text or other contents */
     flex-direction: column;
@@ -175,15 +224,45 @@ nav ul {
 /*** SECTION FORMATTING ***/
 /**************************/
 
-#adjust,
-#save,
+/* background colours */
 #play {
-    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .4)), url('../img/jellyfish.jpg');
+    background: linear-gradient(rgba(255,20,147, .3), transparent);
 }
 
+#adjust {
+    background: linear-gradient(
+        rgba(218,165,32, .5),
+        transparent,
+        rgba(0,255,127, .3), 
+        transparent, 
+        rgba(255,20,147, .3), 
+        transparent);
+}
 
+#save {
+    background: linear-gradient(
+        rgba(0,255,127, .3), 
+        transparent);
+}
+
+#more {
+    background: linear-gradient(
+        rgba(218,165,32, .5),
+        transparent);
+}
+
+#about {
+    background: linear-gradient(
+        rgba(79,66,181, .3), 
+        transparent);
+}
+
+/* background formatting */
+#play,
 #adjust,
 #save,
+#more,
+#about,
 #coming-soon {
     min-height: 100vh;
     background-size: cover;
@@ -420,12 +499,6 @@ nav ul {
 /*** MORE ***/
 /*************/
 
-#more {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)), url('../img/shiny-leaf.jpg');
-    color: white;
-    background-size: cover;
-}
-
 .more-head {
     min-height: 100vh;
     width: 90%;
@@ -519,11 +592,6 @@ nav ul {
 
 .about-head {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)),
-        url("../img/astronomy.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: violet;
     padding: 0 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
 }
 
@@ -609,41 +677,6 @@ nav ul {
 
 .form-wrapper input {
     padding: 1rem 3rem;
-}
-
-/*****************/
-/*** OTHER TINY GUIDES ***/
-/*** INSIDE FOOTER ***/
-/*********************/
-
-.cards {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    min-height: 45vh;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    text-align: center;
-    flex: 1 1 25rem;
-    min-height: 35vh;
-    margin: 2rem 3rem;
-    box-shadow: 0px 10px 10px rgba(255, 255, 255, .1), 0px 20px 20px rgba(255, 255, 255, .1);
-}
-
-.card-icon {
-    background: violet;
-}
-
-.card img {
-    max-width: 15%;
-    margin: 1rem;
-}
-
-.card h4 {
-    padding: 2rem 2.5rem;
 }
 
 /**********************/

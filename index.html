@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="TinyGuide - Volca Keys edition - use your synthesizer right away.">
+    <meta name="description" content="TinyGuide - Volca Keys edition. Use your synthesizer right away!">
     <meta name="robots" content="index,follow">
 
     <link rel="icon" href="icons/music.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/norwester" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
@@ -24,15 +23,14 @@
         the font would match my social media posts -->
     <!-- SOURCE: https://www.macprovideo.com/course/volca-102-volca-keys-explored -->
     <!-- TODO: see all the tuts - condense here - got lesson 5 underway -->
-    <!-- TODO: try to get an easier-to-read font for the logo text -->
-    <!-- TODO: make sure whether anyone is using the name tinyguide.com and on social media platforms
+    <!-- TODO: register name tinyguide.com and on social media platforms
     and if it's available, get the domain and major socmed platforms reggied -->
     <header class="main-head">
         <nav>
             <h1 id="logo"><a href="#start">TinyGuide: Volca Keys</a></h1>
             <!-- if TinyGuide is taken, try HeidiGuides -->
             <ul>
-                <li><a href="#play">Play</a></li>
+                <li><a href="#setup">Setup</a></li>
                 <li><a href="#save">Save</a></li>
                 <li><a href="#more">More</a></li>
                 <li><a href="#about">About</a></li>
@@ -43,37 +41,59 @@
         <div class="hero-wrapper">
             <div class="hero-icon1 box-grid hero-wrapper">
                 <h2>Use your Volca Keys right away</h2>
-                <h3>Walkthrough to help you<br />start from scratch,</br>Just you and me!</h3>
+                <h3>Follow the steps below to<br />go from blank slate</br>to finished song!</h3>
                 <!-- TODO: set up a mailing list & mktg plan specialized for synth learners and players -->
-                <button>Sign up for TinyGuides news<br />(UNDER CONSTRUCTION!)</button>
+                <a href="#setup"><button>Begin<br /></button></a>
             </div>
         </div>
         <!-- TODO: use the iOS app that animates photos slightly, 
         to make the background image more musical/energetic 
     then maybe it's appropriate to stick with the nature photo theme -->
-        
+
     </section>
 
-    <section id="play">
-        <header class="play-head">
-            <h2 class="main-title">Play real-time and saved patterns</h2>
-            <div class="play-wrapper">
+    <section id="setup">
+        <header class="setup-head">
+            <h1 class="main-title">Setup</h1>
+            <div class="setup-wrapper">
                 <div>
-                    <h3>
-                        <img class="icon" src="./icons/play.svg" />
-                    </h3>
-                    <h3>
-                        Once patterns are saved to a memory slot, press Memory + M1 through M8 to play them.
-                        You could 'perform' your song by recording up to 8 tracks and playing them live, one at a time,
-                        with optional real-time sound adjustments described throughout this TinyGuide.
-                    </h3>
-                </div>
-                <div>
-                    <h3>
-                        As the sequencer plays your saved pattern, a blinking red dot moves left to right to indicate
-                        the step
-                        in the sequence that is active
-                    </h3>
+                    <h2>Background</h2>
+                    <p>
+                            Your Volca Keys contains a sequencer with 8 memory slots.
+                            On scrap paper, note the slots you'll use for this song, and any
+                            slots you prepared for other songs so you don't accidentally overwrite those.
+                            The plan is to record up to 8 patterns in memory to combine as a song.
+                            Each pattern has 16 steps. You can also play real-time like a piano,
+                            best recorded on a computer (covered later).
+                    </p>
+                    <h2>Select a memory slot</h2>
+                    <p>Press
+                        <button class="instruction">Function</button> +
+                        <button class="instruction">Memory</button> then let go. Press
+                        <button class="instruction">M1</button> through
+                        <button class="instruction">M8</button> to select the slot to hear or record to. 
+                    </p>
+                    <h2>Play or record to the slot</h2>
+                    <p>
+                        Press 
+                        <button class="instruction">Play</button> to hear the stored pattern, or 
+                        <button class="instruction">Play</button> + 
+                        <button class="instruction">Record</button> to record to that slot. If the slot is empty when you start,
+                        you can simply press <button class="instruction">Record</button> then as soon as you press keys, the sequencer 
+                        begins recording and will continue looping. In any case, when you like what's been recorded, toggle <button class="instruction">Record</button> off.
+                    </p>
+                    <h2>What's next?</h2>
+                    <p>With the memory slot selected and playing, keep listening and when you're ready, 
+                        record to the slot while playing notes or chords. Alternatively use 'step recording' described later.
+                        The red dot moves left to right as the sequencer plays, to indicate what step is being played. 
+                        Subsequent recording adds to the recorded pattern unless you erase the slot first.
+                    </p>
+                    <p>
+                        Once patterns are saved to several memory slots, press Memory + M1 through M8 to play them. 
+                        The sequencer continually loops while you shift between memory slots.
+                        You could record your song to a computer in this manner using audio connections; you can optionally adjust
+                        knobs to affect the sound while patterns are playing. You could instead compile a song in the Volca (described later).
+                    </p>
                 </div>
 
             </div>
@@ -87,15 +107,34 @@
             <!-- FIXME: remove animated parts of CSS and gfx files not currently used -->
             <div class="inner-nav">
                 <ul>
-                    <li><a href="#adjust"><button>Adjustments</button></a></li>
+                    <li><a href="#adjust"><button>Next</button></a></li>
                 </ul>
             </div>
         </header>
     </section>
     <section id="adjust">
         <header class="adjust-head">
-            <h2 class="main-title">Adjust the sound</h2>
-            <h3>Applies to live playing, and adjusting the sound of saved patterns that are playing.</h3>
+            <h1 class="main-title">Play, Adjust, and Record</h1>
+            <div class="adjust-wrapper">
+                <h2>Background</h2>
+                <p>
+                    Start your song making by recording melodies or chords to a pattern. 
+                    First we'll look at the real-time recording method. Step recording is shown later.
+                </p>
+                <h3>
+                    <em>RECORD </em>real-time pattern, from cold start: Select the memory slot first, 
+                    then press <button class="instruction">Record</button>. 
+                    Play your melody.
+                </h3>
+                <h3><em>ERASE </em>a memory slot: Hold Function and press M1 through M8. To erase all slots: press 
+                    <button class="instruction">Function</button> + 
+                    <button class="instruction">All</button> (last key on keyboard).</h3>
+                <h3>
+                    This records your live playing, fitted (quantized) to the 16-step pattern length. 
+                    The sequencer will continue playing, repeating the pattern. Recording may stay active.
+                </h3>
+            </div>
+
             <div class="cards cards-with-bullets">
                 <!-- TODO: make these smaller -->
                 <!-- TODO: cards section could be buttons for other TinyGuides I've made -->
@@ -253,7 +292,7 @@
 
     <section id="save">
         <header class="save-head">
-            <h2 class="main-title">Save your pattern</h2>
+            <h1 class="main-title">Save your pattern</h1>
             <h4>Using memory slots</h4>
             <div class="save-wrapper">
                 <div class="music-icon1 box-grid icon-wrapper"><img class="icon" src="./icons/musical-notes.svg" />
@@ -265,29 +304,10 @@
                 <div class="record-icon1 box-grid icon-wrapper"><img class="icon" src="./icons/record.svg" /></div>
                 <div class="record-icon2 box-grid icon-wrapper"><img class="icon" src="./icons/record.svg" /></div>
                 <div class="save1 box-grid">
-                    <div class="icon-label">
-                        <h3>Examine memory</h3>
-                    </div>
-                    <div class="detail">
-                        <h3>
-                            Keys M1 through M8 correspond to 8 memory slots. Before creating a new pattern to record &
-                            save,
-                            listen to them all and pick one to record on.
-                        </h3>
-                    </div>
                 </div>
                 <div class="save2 box-grid">
                     <div class="icon-label">
                         <h3>Pick a slot </h3>
-                    </div>
-                    <div class="detail">
-                        <h3>
-                            Hold Function + press Memory. Let go. Press the memory slot you want to save to, using keys
-                            M1
-                            through M8. The key that's consistently blinking indicates the current memory slot that's
-                            playing now,
-                            if the sequencer is playing.
-                        </h3>
                     </div>
                 </div>
                 <div class="save3 box-grid">
@@ -318,14 +338,6 @@
                         </h3>
                     </div>
                 </div>
-                <div class="save5 box-grid">
-                    <div class="icon-label">
-                        <h3>Erase slot</h3>
-                    </div>
-                    <div class="detail">
-                        <h3>Hold Function and press last key marked "All"</h3>
-                    </div>
-                </div>
             </div>
 
 
@@ -337,7 +349,7 @@
 
     <section id="more">
         <header class="more-head">
-            <h2 class="main-title">More tips</h2>
+            <h1 class="main-title">More tips</h1>
             <div class="more-wrapper">
                 <div class="para1 box-grid">
                     <h3>
@@ -362,7 +374,7 @@
                         Then arrange clips with DAW software.
                     </h3>
                 </div>
-                
+
             </div>
 
 
@@ -376,7 +388,7 @@
 
     <section id="about">
         <header class="about-head">
-            <h2 class="main-title">About TinyGuides</h2>
+            <h1 class="main-title">About TinyGuides</h1>
             <div class="about-wrapper">
                 <div class="about1 box-grid">
                     <h3>
@@ -419,7 +431,7 @@
     <section id="contact">
         <div class="form-wrapper">
             <header class="form-head">
-                <h2>Contact Us</h2>
+                <h1>Contact Us</h1>
             </header>
             <form>
                 <!-- add submit function using formspree.io as shown in lesson 42 -->
@@ -438,7 +450,7 @@
 
     <footer>
         <div class="footer-wrapper" id="coming-soon">
-            <h2 class="main-title">Coming soon:</h2>
+            <h1 class="main-title">Coming soon:</h1>
             <!-- TODO: coming soon belongs atop the JDXI
             and "in development" for the PO-28 cuz I'll build that next -->
             <div class="cards">

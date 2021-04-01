@@ -17,24 +17,31 @@ body {
 }
 
 h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
 }
 
 li,
 button,
 label,
-input,
-p {
+input {
     font-size: 2rem;
-}
-
-h2 {
-    font-size: 4.8rem;
 }
 
 h2.interior-title {
     text-align: center;
-    font-size: 3rem;
     padding-top: 5%;
     padding-bottom: 1%;
 }
@@ -44,11 +51,6 @@ h3,
 h3 ul li {
     font-size: 3rem;
     font-weight: normal;
-}
-
-h4,
-h5 {
-    font-size: 2.8rem;
 }
 
 a {
@@ -61,9 +63,10 @@ a {
 /************/
 /*** PADDING ***/
 /***************/
-#play h3,
+#setup h3,
 #adjust h3 {
-    padding: 3rem 0; /* space out paragraphs without indenting */
+    padding: 3rem 0;
+    /* space out paragraphs without indenting */
 }
 
 /***************/
@@ -71,11 +74,14 @@ a {
 /***************/
 
 button {
-    padding: 2rem 6rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem 2rem;
     background: #4c6e97;
     border: none;
+    border-radius: 5px 20px 5px;
     color: white;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     cursor: pointer;
     /* cursor becomes pointer shape when over a button */
     transition: background 0.5s ease-in-out;
@@ -89,13 +95,22 @@ button:hover {
     background: #27394e;
 }
 
+button.instruction {
+    font-size: 1.9rem;
+    padding: 3px;
+    background: saddlebrown;
+    border-radius: 10%;
+    transition: none;
+    animation: none;
+}
+
 /*************/
 /*** CARDS ***/
 /*************/
 
 .cards {
-    width: 90%;
-    margin: auto;
+    /* width: 90%; */
+    /* margin: auto; */
     display: flex;
     min-height: 45vh;
     align-items: center;
@@ -193,7 +208,7 @@ nav ul {
     /* hero section occupies 90% of screen; nav bar uses 10% */
     /* background: linear-gradient(rgba(0, 0, 0, .7), transparent),
         url('../img/volca-keys-home.jpg'); */
-        background: linear-gradient(rgba(218,165,32, .5), transparent);
+    background: linear-gradient(rgba(218, 165, 32, .5), transparent);
     /* gradient lets text be more visible w/o covering whole photo */
     background-repeat: no-repeat;
     background-size: cover;
@@ -215,50 +230,44 @@ nav ul {
     /* centres child item to create padding within #locations parent */
 }
 
-.hero h3 {
-    padding: 5rem;
-    /* give space above and below the middle item in hero section */
-}
+.hero h2 { font-size: 4.5rem; }
+.hero h3 { padding: 5rem; }
 
 /**************************/
 /*** SECTION FORMATTING ***/
 /**************************/
 
 /* background colours */
-#play {
-    background: linear-gradient(rgba(255,20,147, .3), transparent);
+#setup {
+    background: linear-gradient(rgba(255, 20, 147, .3), transparent);
 }
 
 #adjust {
-    background: linear-gradient(
-        rgba(218,165,32, .5),
-        transparent,
-        rgba(0,255,127, .3), 
-        transparent, 
-        rgba(255,20,147, .3), 
-        transparent);
+    background: linear-gradient(rgba(218, 165, 32, .5),
+            transparent,
+            rgba(0, 255, 127, .3),
+            transparent,
+            rgba(255, 20, 147, .3),
+            transparent);
 }
 
 #save {
-    background: linear-gradient(
-        rgba(0,255,127, .3), 
-        transparent);
+    background: linear-gradient(rgba(0, 255, 127, .3),
+            transparent);
 }
 
 #more {
-    background: linear-gradient(
-        rgba(218,165,32, .5),
-        transparent);
+    background: linear-gradient(rgba(218, 165, 32, .5),
+            transparent);
 }
 
 #about {
-    background: linear-gradient(
-        rgba(79,66,181, .3), 
-        transparent);
+    background: linear-gradient(rgba(79, 66, 181, .3),
+            transparent);
 }
 
 /* background formatting */
-#play,
+#setup,
 #adjust,
 #save,
 #more,
@@ -282,10 +291,10 @@ nav ul {
 }
 
 /**********/
-/*** PLAY SECTION ***/
+/*** SETUP SECTION ***/
 /***********/
 
-.play-head {
+.setup-head {
     width: 90%;
     /* make smaller flexbox than parent element */
     margin: auto;
@@ -293,12 +302,12 @@ nav ul {
     min-height: 100vh;
 }
 
-#play .play-wrapper {
+#setup .setup-wrapper {
     display: flex;
     flex-direction: column;
 }
 
-#play h3 {
+#setup h3 {
     font-size: 2.2rem;
 }
 
@@ -353,6 +362,11 @@ nav ul {
 /**********************/
 /*** ADJUST SECTION ***/
 /**********************/
+.adjust-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .adjust-head {
     width: 90%;
     margin: auto;
@@ -362,15 +376,20 @@ nav ul {
     display: flex;
 }
 
-.adjust-head h3,
+.adjust-head h3 {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+}
+
+
 .adjust-head ul li {
-    font-size: 2rem;
+    font-size: 2.2rem;
     /* FIXME: default was 3rem but pushes header up under the sticky header */
     /* could split this section into two and remove this size adjustment */
     padding: 1rem 2rem;
-    width: 90%;
+    /* width: 90%; */
     /* make smaller flexbox than parent element */
-    margin: auto;
+    /* margin: auto; */
     /* centres child item to create padding within #locations parent */
 }
 
@@ -404,11 +423,10 @@ nav ul {
     /* makes img act like a bullet where 'list-style none' can't be revoked */
     height: 20px;
     display: inline-block;
-    margin: 0;
 }
 
 #adjust button {
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
     /* manually create extra space even though it's a long section */
 }
 
@@ -425,11 +443,9 @@ nav ul {
 .save-wrapper {
     display: grid;
     grid-template-columns: 7rem 1fr 7rem 1fr;
-    grid-template-rows: 
-        27rem 
-        18rem
-        30rem;
-    grid-template-areas: 
+    grid-template-rows:
+        27rem 18rem 30rem;
+    grid-template-areas:
         "music-icon1    save1  music-icon3   save2"
         "record-icon1   save3  record-icon2  save4"
         ".             save3  music-icon2  save5";
@@ -471,6 +487,7 @@ nav ul {
     align-self: top;
     padding-left: 5px;
 }
+
 .save1 {
     grid-area: save1;
 }
@@ -505,17 +522,17 @@ nav ul {
     /* make smaller flexbox than parent element */
     margin: auto;
     /* centres child item to create padding within #locations parent */
-    padding: 0 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
+    padding: 0 3rem 3rem 3rem;
+    /* explicit to accommodate sticky header's height */
 }
 
 /* set up paragraphs with grid layout */
 .more-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 
-        15rem 
-        25rem;
-    grid-template-areas: 
+    grid-template-rows:
+        15rem 25rem;
+    grid-template-areas:
         "para1 para2"
         "para3 para3";
     flex-direction: column;
@@ -525,6 +542,7 @@ nav ul {
 #more h3 {
     font-size: 2.2rem;
 }
+
 /* set up child elements as boxes */
 #more .box-grid {
     padding: 2rem 0;
@@ -548,7 +566,7 @@ nav ul {
 
 
 #more .inner-nav ul,
-#play .inner-nav ul,
+#setup .inner-nav ul,
 #adjust .inner-nav ul,
 #about .inner-nav ul {
     /* styled after nav ul */
@@ -592,7 +610,8 @@ nav ul {
 
 .about-head {
     min-height: 100vh;
-    padding: 0 3rem 3rem 3rem; /* explicit to accommodate sticky header's height */
+    padding: 0 3rem 3rem 3rem;
+    /* explicit to accommodate sticky header's height */
 }
 
 .about-wrapper {
@@ -600,10 +619,9 @@ nav ul {
     padding-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 
-        12rem 
-        30rem;
-    grid-template-areas: 
+    grid-template-rows:
+        12rem 30rem;
+    grid-template-areas:
         "about1 about1"
         "about2 about3";
     flex-direction: column;
@@ -757,7 +775,7 @@ footer a {
         /*background: rgba(12, 60, 0, .2);
         -webkit-text-fill-color: white;*/
     }
-    
+
     .icon {
         height: 45px;
         /* move neighbours slightly right in case of multiple icons in a row */
@@ -788,22 +806,18 @@ footer a {
     footer .card {
         min-height: 20vh;
     }
-    
+
 }
 
 @media screen and (max-width: 673px) {
     .save-wrapper {
-        grid-template-rows: 
-            33rem 
-            22rem
-            30rem;
+        grid-template-rows:
+            33rem 22rem 30rem;
     }
 
     .more-wrapper {
-        grid-template-rows: 
-            10rem 
-            12rem
-            33rem;
+        grid-template-rows:
+            10rem 12rem 33rem;
         grid-template-areas:
             "para1 para1"
             "para2 para2"
@@ -811,11 +825,9 @@ footer a {
     }
 
     .about-wrapper {
-        grid-template-rows: 
-            12rem 
-            18rem
-            17rem;
-        grid-template-areas: 
+        grid-template-rows:
+            12rem 18rem 17rem;
+        grid-template-areas:
             "about1 about1"
             "about2 about2"
             "about3 about3";
@@ -831,20 +843,17 @@ footer a {
     .recording-wrapper {
         flex-direction: column;
     }
-    
+
     .icon {
         height: 25px;
     }
+
     .save-wrapper {
         grid-template-columns: 4rem 1fr;
-        grid-template-rows: 
-            22rem 
-            24rem
-            37rem
-            18rem
-            20rem;
-        grid-template-areas: 
-            "music-icon1    save1"  
+        grid-template-rows:
+            22rem 24rem 37rem 18rem 20rem;
+        grid-template-areas:
+            "music-icon1    save1"
             "music-icon2    save2"
             "record-icon1   save3"
             "record-icon2   save4"

@@ -31,7 +31,8 @@
             <!-- if TinyGuide is taken, try HeidiGuides -->
             <ul>
                 <li><a href="#setup">Setup</a></li>
-                <li><a href="#save">Save</a></li>
+                <li><a href="#play">Play</a></li>
+                <li><a href="#adjust">Adjust</a></li>
                 <li><a href="#more">More</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
@@ -130,10 +131,17 @@
                 <h2>Record real-time playing</h2>
                 <p>
                     If sequencer isn't running, select the desired memory slot first, then press
-                    <button class="instruction">Record</button> then play your notes.
+                    <button class="instruction">Record</button> then play your notes. If the sequencer
+                    is already playing the pattern, toggle recording on and off by pressing
+                    <button class="instruction">Record</button>; your playing will add to the recorded
+                    pattern (results may be unpredictable). To begin playing the sequencer and recording at
+                    the same time, press
+                    <button class="instruction">Play</button> +
+                    <button class="instruction">Record</button> at the same time.
                 </p>
                 <h2>Step Recording</h2>
                 <p>Coming soon.</p>
+                <!-- TODO: add step recording; find an easy source for how that's done -->
                 <h2>Erase a memory slot</h2>
                 <p>
                     Press
@@ -161,7 +169,7 @@
                 <ul>
                     <li><a href="#adjust"><button>Next</button></a></li>
                 </ul>
-               
+
             </div>
         </header>
     </section>
@@ -169,16 +177,15 @@
         <header class="adjust-head">
             <h1 class="main-title">Adjust Sounds</h1>
             <div class="adjust-wrapper">
-<h2>Background</h2>
-<p>
-    Adjust your sounds before or during play, and after recording patterns. 
-    When you adjust knobs, all future sounds are affected as well as patterns
-    already recorded. To be certain about capturing sounds as you currently hear them,
-    save to a computer using audio cables and a Digital Audio Workstation software.
-</p>
-<h2>Knob options</h2>
+                <h2>Background</h2>
+                <p>
+                    Adjust your sounds before or during play, and after recording patterns.
+                    When you adjust knobs, all future sounds are affected as well as patterns
+                    already recorded. To be certain about capturing sounds as you currently hear them,
+                    save to a computer using audio cables and a Digital Audio Workstation software.
+                </p>
+                <h2>Knob options</h2>
                 <div class="cards cards-with-bullets">
-                    <!-- TODO: make these smaller -->
                     <!-- TODO: cards section could be buttons for other TinyGuides I've made -->
                     <!-- TODO: want to add h2 "More TinyGuides" but it screws up the formatting -->
                     <!-- TODO: make flat icons for these; add "coming soon" -->
@@ -186,13 +193,11 @@
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>Start Clean</h4>
+                        <h3>Start Clean</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Set VCO and LFO sections knobs at zero
-                            </li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">VCF section all at mid-point</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Last section: Attack at zero; the
-                                others
+                            <li>Set VCO and LFO sections knobs at zero</li>
+                            <li>VCF section all at mid-point</li>
+                            <li>Last section: Attack at zero; the others
                                 can be higher.</li>
                         </ul>
                     </div>
@@ -200,41 +205,46 @@
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>Voice knob</h4>
+                        <h3>Voice knob</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Try out Octave, Fifth, etc.</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Poly mode enables chords</li>
+                            <li>Try out Octave, Fifth, etc</li>
+                            <li>Poly mode enables chords</li>
                         </ul>
                     </div>
                     <div class="card card-dark">
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>VCF</h4>
+                        <h3>VCF</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">From tinny/airy to rich.</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Adjust Peak to hear its effect</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Revisit VCF section if you adjust LFO
+                            <li>From tinny/airy to rich</li>
+                            <li>Adjust Peak to hear its effect</li>
+                            <li>Revisit VCF section if you adjust LFO
                                 section</li>
                         </ul>
-
                     </div>
                     <div class="card card-dark">
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>LFO Rate</h4>
+                        <h3>LFO Rate</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Clockwise: adds repetition to notes
-                                held
-                            </li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Clean sound: this column all zero
-                                level
-                            </li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">At or near max: fatter sound</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Adjust Peak to hear its effect</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Revisit VCF section if you adjust LFO
-                                section</li>
+                            <li>Clockwise: adds repetition to notes held</li>
+                            <li>Clean sound: this column all zero level</li>
+                            <li>At or near max: fatter sound</li>
+                            <li>Adjust Peak to hear its effect</li>
+                            <li>Revisit VCF section if you adjust LFO section</li>
+                        </ul>
+                    </div>
+                    <div class="card card-dark">
+                        <div class="card-icon">
+                            <img src="./icons/volume.svg" alt="generic music icon">
+                        </div>
+                        <h3>LFO Pitch Int</h3>
+                        <ul>
+                            <li>Changes dropoff of pitch while key held down</li>
+                            <li>Start at zero > increase slowly to gauge results</li>
+                            <li>Revisit Pitch Int if you change Rate</li>
                         </ul>
 
                     </div>
@@ -242,16 +252,11 @@
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>LFO Pitch Int</h4>
+                        <h3>LFO Cutoff Int</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Changes dropoff of pitch while key
-                                held
-                                down</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Start at zero > increase slowly to
-                                gauge
-                                results</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Revisit Pitch Int if you change Rate
-                            </li>
+                            <li>Start at zero</li>
+                            <li>Increase to set dropoff of cutoff</li>
+                            <li>Revisit if you adjust Rate</li>
                         </ul>
 
                     </div>
@@ -259,39 +264,23 @@
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>LFO Cutoff Int</h4>
+                        <h3>Delay Time & Feedback</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Start at zero</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Increase to set dropoff of cutoff</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Revisit if you adjust Rate</li>
+                            <li>Purpose: delays output > space effect</li>
+                            <li>Delay Time: adjust for more or less dreamy sound</li>
                         </ul>
-
                     </div>
                     <div class="card card-dark">
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>Delay Time & Feedback</h4>
+                        <h3>Motion recording</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Purpose: delays output > space effect
-                            </li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Delay Time: adjust for more or less
-                                dreamy
-                                sound</li>
-                        </ul>
-
-                    </div>
-                    <div class="card card-dark">
-                        <div class="card-icon">
-                            <img src="./icons/volume.svg" alt="generic music icon">
-                        </div>
-                        <h4>Motion recording</h4>
-                        <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Allows recording new adjustments to a
+                            <li>Allows recording new adjustments to a
                                 saved pattern</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">First save a pattern to a memory slot,
+                            <li>First save a pattern to a memory slot,
                                 then play it</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Hit Record (big dot) then make
+                            <li>Hit Record (big dot) then make
                                 adjustments
                                 while sequencer continually plays</li>
                         </ul>
@@ -301,14 +290,14 @@
                         <div class="card-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>Motion recording surprises</h4>
+                        <h3>Motion recording surprises</h3>
                         <ul>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">While pattern is playing, adjustments
+                            <li>While pattern is playing, adjustments
                                 may
                                 not fully affect recorded notes (usually) even though they're very noticeable when
                                 playing
                                 live</li>
-                            <li><img src="./icons/volume.svg" class="bullet-icon">Recording stops automatically after a
+                            <li>Recording stops automatically after a
                                 short
                                 time; hit Record again if necessary and wait for the step you need to adjust</li>
                         </ul>
@@ -318,7 +307,7 @@
                         <div class="card-icon last-icon">
                             <img src="./icons/volume.svg" alt="generic music icon">
                         </div>
-                        <h4>One More Note</h4>
+                        <h3>One More Note</h3>
                         <ul>
                             <li>Not all adjustments are eligible for 'motion' recording in this manner.
                                 Results will vary, because the Volca tries to quantize or fit the adjustments to the
@@ -341,63 +330,6 @@
                         <li><a href="#play"><button>Return to Play</button></a></li>
                     </ul>
                 </div>
-        </header>
-    </section>
-
-    <section id="save">
-        <header class="save-head">
-            <h1 class="main-title">Save your pattern</h1>
-            <h4>Using memory slots</h4>
-            <div class="save-wrapper">
-                <div class="music-icon1 box-grid icon-wrapper"><img class="icon" src="./icons/musical-notes.svg" />
-                </div>
-                <div class="music-icon2 box-grid icon-wrapper"><img class="icon" src="./icons/musical-notes.svg" />
-                </div>
-                <div class="music-icon3 box-grid icon-wrapper"><img class="icon" src="./icons/musical-notes.svg" />
-                </div>
-                <div class="record-icon1 box-grid icon-wrapper"><img class="icon" src="./icons/record.svg" /></div>
-                <div class="record-icon2 box-grid icon-wrapper"><img class="icon" src="./icons/record.svg" /></div>
-                <div class="save1 box-grid">
-                </div>
-                <div class="save2 box-grid">
-                    <div class="icon-label">
-                        <h3>Pick a slot </h3>
-                    </div>
-                </div>
-                <div class="save3 box-grid">
-
-                    <div class="icon-label">
-                        <h3>Start recording</h3>
-                    </div>
-                    <div class="detail">
-                        <h3>
-                            While sequencer not running, press Record, and play the pattern up to 16 steps.
-                            Sequencer continues looping and recording stays active.
-                            <br /><br />Or, while sequencer playing, hit Play then Record or both at same time, then
-                            what you play
-                            will be recorded even while sequencer loops. New notes overwrite those in memory. Results
-                            may be
-                            unpredictable.</h3>
-                    </div>
-                </div>
-                <div class="save4 box-grid">
-                    <div class="icon-label">
-                        <h3>Stop recording</h3>
-                    </div>
-                    <div class="detail">
-                        <h3>
-                            Record and Play buttons toggle on and off, so usually all you need to do is press Record to
-                            stop
-                            recording, or Play to stop everything.
-                        </h3>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- TODO: add step recording; find an easy source for how that's done -->
-            <!-- TODO: adjust CSS for the new IDs created for each section -->
         </header>
     </section>
 

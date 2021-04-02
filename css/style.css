@@ -38,19 +38,13 @@ button,
 label,
 input {
     font-size: 2rem;
+    list-style: none;
 }
 
 h2.interior-title {
     text-align: center;
     padding-top: 5%;
     padding-bottom: 1%;
-}
-
-/* make bullet points retain h3 formatting */
-h3,
-h3 ul li {
-    font-size: 3rem;
-    font-weight: normal;
 }
 
 a {
@@ -258,11 +252,6 @@ nav ul {
             transparent);
 }
 
-#save {
-    background: linear-gradient(rgba(0, 255, 127, .3),
-            transparent);
-}
-
 #more {
     background: linear-gradient(rgba(218, 165, 32, .5),
             transparent);
@@ -277,7 +266,6 @@ nav ul {
 #setup,
 #play,
 #adjust,
-#save,
 #more,
 #about,
 #coming-soon {
@@ -400,39 +388,23 @@ nav ul {
     margin: auto;
 }
 
-.adjust-head li {
-    display: flex;
+#adjust h3 {
+    padding-bottom: 0;
 }
 
-.adjust-head ul li {
-    font-size: 2.2rem;
-    /* FIXME: default was 3rem but pushes header up under the sticky header */
-    /* could split this section into two and remove this size adjustment */
-    padding: 1rem 2rem;
-    /* width: 90%; */
-    /* make smaller flexbox than parent element */
-    /* margin: auto; */
-    /* centres child item to create padding within #locations parent */
+.adjust-wrapper ul li {
+    margin: 1rem 3rem;
+    text-align: left;
+    list-style: disc;
 }
 
 #adjust img {
     max-height: 50px;
 }
 
-.bullet-icon {
-    height: 32px;
-    padding: .5rem;
-    align-items: center;
-    /* vertical align */
-}
-
 #adjust .cards-with-bullets {
     align-items: start;
     /* keep icons in line at top edge of row */
-}
-
-#adjust .cards-with-bullets ul {
-    text-align: left;
 }
 
 
@@ -441,98 +413,15 @@ nav ul {
     font-size: 1.7rem;
 }
 
-#adjust .card li img {
-    /* makes img act like a bullet where 'list-style none' can't be revoked */
-    height: 20px;
-    display: inline-block;
-}
-
-/********************/
-/*** SAVE SECTION ***/
-/********************/
-.save-head {
-    width: 90%;
-    /* make smaller flexbox than parent element */
-    margin: auto;
-    /* centres child item to create padding within #locations parent */
-}
-
-.save-wrapper {
-    display: grid;
-    grid-template-columns: 7rem 1fr 7rem 1fr;
-    grid-template-rows:
-        27rem 18rem 30rem;
-    grid-template-areas:
-        "music-icon1    save1  music-icon3   save2"
-        "record-icon1   save3  record-icon2  save4"
-        ".             save3  music-icon2  save5";
-    flex-direction: column;
-    grid-gap: 1rem;
-    flex-wrap: wrap;
-}
-
-#save .box-grid {
-    padding-top: 4rem;
-}
-
-.music-icon1 {
-    grid-area: music-icon1;
-    align-self: top;
-    padding-left: 5px;
-}
-
-.music-icon2 {
-    grid-area: music-icon2;
-    align-self: top;
-    padding-left: 5px;
-}
-
-.music-icon3 {
-    grid-area: music-icon3;
-    align-self: top;
-    padding-left: 5px;
-}
-
-.record-icon1 {
-    grid-area: record-icon1;
-    align-self: top;
-    padding-left: 5px;
-}
-
-.record-icon2 {
-    grid-area: record-icon2;
-    align-self: top;
-    padding-left: 5px;
-}
-
-.save1 {
-    grid-area: save1;
-}
-
-.save2 {
-    grid-area: save2;
-}
-
-.save3 {
-    grid-area: save3;
-}
-
-.save4 {
-    grid-area: save4;
-}
-
-.save5 {
-    grid-area: save5;
-}
-
-#save div.detail h3 {
-    font-size: 1.8rem;
+#adjust .inner-nav li {
+    list-style: none;
 }
 
 /**************/
 /*** MORE ***/
 /*************/
 
+/* TODO: move these items to other sections, and create a 'record to computer' section */
 .more-head {
     min-height: 100vh;
     width: 90%;
@@ -597,7 +486,7 @@ nav ul {
     /* evenly spaced items within nav UL */
     align-items: center;
     /* nav links centred vertically */
-    list-style: none;
+    /* list-style: none; */
     /* remove bullet points */
 }
 
@@ -816,11 +705,6 @@ footer a {
 }
 
 @media screen and (max-width: 673px) {
-    .save-wrapper {
-        grid-template-rows:
-            33rem 22rem 30rem;
-    }
-
     .more-wrapper {
         grid-template-rows:
             10rem 12rem 33rem;
@@ -852,17 +736,5 @@ footer a {
 
     .icon {
         height: 25px;
-    }
-
-    .save-wrapper {
-        grid-template-columns: 4rem 1fr;
-        grid-template-rows:
-            22rem 24rem 37rem 18rem 20rem;
-        grid-template-areas:
-            "music-icon1    save1"
-            "music-icon2    save2"
-            "record-icon1   save3"
-            "record-icon2   save4"
-            "music-icon3    save5";
     }
 }

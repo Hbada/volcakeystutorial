@@ -30,7 +30,7 @@ h3 {
 
 p {
     font-size: 1.8rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2.2rem;
 }
 
 li,
@@ -204,7 +204,7 @@ nav ul {
     /* template was 90vh */
     /* hero section occupies 90% of screen; nav bar uses 10% */
     /* background: linear-gradient(rgba(0, 0, 0, .7), transparent),
-        url('../img/volca-keys-home.jpg'); */
+        url('../icons/hero-knob.png'); */
     background: linear-gradient(rgba(218, 165, 32, .5), transparent);
     /* gradient lets text be more visible w/o covering whole photo */
     background-repeat: no-repeat;
@@ -225,14 +225,41 @@ nav ul {
     /* centre text within its container */
     margin: auto;
     /* centres child item to create padding within #locations parent */
+    overflow: hidden; /* prevents edge items from overlapping with adjacent sections */
 }
 
-.hero h2 { font-size: 4.5rem; }
-.hero h3 { padding: 5rem; }
+.hero-image {
+    position: absolute;
+    right: -40px;
+    bottom: -10vh;
+    max-height: 40vh;
+    opacity: 50%;
+}
+.hero h2 { 
+    font-size: 4.5rem; 
+}
+
+.hero h3 { 
+    padding: 5rem 0; 
+}
 
 /**************************/
 /*** SECTION FORMATTING ***/
 /**************************/
+
+section { 
+    position: relative; /* makes children accept position style */
+    overflow: hidden; /* prevents items at edge from spreading into adjacent sections */
+} 
+
+section .brand-image {
+    position: absolute;
+    right: -40px;
+    top: 5vh; /* hides a bit and compensates for 10vh sticky header */
+    max-height: 20vh;
+    opacity: 50%;
+    overflow: hidden; 
+}
 
 /* background colours */
 #setup {
@@ -281,7 +308,6 @@ nav ul {
 }
 
 /* make room for sticky header */
-
 .main-title {
     padding-top: 15vh;
 }
@@ -342,15 +368,15 @@ nav ul {
 
 @keyframes buttonAnimation {
     0% {
-        background: lightblue;
+        background: fuchsia;
     }
 
     25% {
-        background: rgb(35, 98, 119);
+        background: rgb(170, 20, 200);
     }
 
     100% {
-        background: rgb(99, 35, 119);
+        background: rgb(250, 84, 186);
     }
 }
 
@@ -378,15 +404,18 @@ nav ul {
 /**********************/
 /*** ADJUST SECTION ***/
 /**********************/
-.adjust-wrapper {
-    display: flex;
-    flex-direction: column;
-}
 
 .adjust-head {
     width: 90%;
     margin: auto;
+    min-height: 100vh;
 }
+
+#adjust .adjust-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 
 #adjust h3 {
     padding-bottom: 0;
@@ -398,7 +427,7 @@ nav ul {
     list-style: disc;
 }
 
-#adjust img {
+#adjust .card-icon img {
     max-height: 50px;
 }
 
@@ -643,6 +672,9 @@ footer a {
     color: lightblue;
 }
 
+footer ul li img {
+    max-width: 32px;
+}
 
 /*********************/
 /*** MEDIA QUERIES ***/
@@ -676,6 +708,15 @@ footer a {
         /* move neighbours slightly right in case of multiple icons in a row */
     }
 
+    .hero-image {
+        opacity: 40%;
+    }
+
+    section .brand-image {
+        max-height: 18vh; /* smaller for ipads etc */
+        opacity: 40%;
+    }
+
     .adjust-head ul {
         padding: 0 2rem;
     }
@@ -705,6 +746,18 @@ footer a {
 }
 
 @media screen and (max-width: 673px) {
+    .hero-image {
+        right: -56px;
+        bottom: -10vh;
+        max-height: 30vh;
+        opacity: 40%;
+    }
+
+    section .brand-image {
+        max-height: 15vh; /* smaller for ipads etc */
+        opacity: 30%;
+    }
+
     .more-wrapper {
         grid-template-rows:
             10rem 12rem 33rem;

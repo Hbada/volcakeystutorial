@@ -64,6 +64,7 @@ a {
 /*** PADDING ***/
 /***************/
 #setup h3,
+#play h3,
 #adjust h3 {
     padding: 3rem 0;
     /* space out paragraphs without indenting */
@@ -96,12 +97,14 @@ button:hover {
 }
 
 button.instruction {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     padding: 3px;
     background: saddlebrown;
-    border-radius: 10%;
+    border-radius: 3px;
     transition: none;
     animation: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /*************/
@@ -242,6 +245,10 @@ nav ul {
     background: linear-gradient(rgba(255, 20, 147, .3), transparent);
 }
 
+#play {
+    background: linear-gradient(rgba(0, 255, 127, .3),
+            transparent);
+}
 #adjust {
     background: linear-gradient(rgba(218, 165, 32, .5),
             transparent,
@@ -268,6 +275,7 @@ nav ul {
 
 /* background formatting */
 #setup,
+#play,
 #adjust,
 #save,
 #more,
@@ -358,6 +366,26 @@ nav ul {
     }
 }
 
+/**********/
+/*** PLAY SECTION ***/
+/***********/
+
+.play-head {
+    width: 90%;
+    /* make smaller flexbox than parent element */
+    margin: auto;
+    /* centres child item to create padding within #locations parent */
+    min-height: 100vh;
+}
+
+#play .play-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#play h3 {
+    font-size: 2.2rem;
+}
 
 /**********************/
 /*** ADJUST SECTION ***/
@@ -375,12 +403,6 @@ nav ul {
 .adjust-head li {
     display: flex;
 }
-
-.adjust-head h3 {
-    font-size: 3rem;
-    padding: 1rem 2rem;
-}
-
 
 .adjust-head ul li {
     font-size: 2.2rem;
@@ -423,11 +445,6 @@ nav ul {
     /* makes img act like a bullet where 'list-style none' can't be revoked */
     height: 20px;
     display: inline-block;
-}
-
-#adjust button {
-    /* margin-bottom: 5rem; */
-    /* manually create extra space even though it's a long section */
 }
 
 /********************/
@@ -564,10 +581,10 @@ nav ul {
     grid-area: para4;
 }
 
-
-#more .inner-nav ul,
 #setup .inner-nav ul,
+#play .inner-nav ul,
 #adjust .inner-nav ul,
+#more .inner-nav ul,
 #about .inner-nav ul {
     /* styled after nav ul */
     display: flex;
@@ -763,17 +780,6 @@ footer a {
 
     #logo {
         padding: 1rem;
-    }
-
-    .adjust-head h3,
-    .save-head h3,
-    .about-head h3 {
-        /* fix problem of black text on photo background 
-        given a gradient text fill not available in mobile browsers.
-        IF background is light, I don't need the gradient colour text fill, 
-        then it's a non-issue and this code block can be removed. */
-        /*background: rgba(12, 60, 0, .2);
-        -webkit-text-fill-color: white;*/
     }
 
     .icon {

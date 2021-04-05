@@ -8,25 +8,12 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2.4rem;
-}
-
-h3 {
-    font-size: 2.2rem;
-}
+html { font-size: 62.5%; }
+body { font-family: 'Poppins', sans-serif; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 2.2rem; }
+h4 { font-size: 2rem; }
 
 p {
     font-size: 1.8rem;
@@ -114,11 +101,15 @@ button.instruction {
     flex-wrap: wrap;
 }
 
+.cards-with-bullets ul li {
+    font-size: 1.5rem;
+}
+
 .card {
     text-align: center;
     flex: 1 1 25rem;
     min-height: 35vh;
-    margin: 2rem 3rem;
+    margin: 2rem 1.4rem;
 }
 
 .card {
@@ -140,6 +131,7 @@ button.instruction {
 
 .card h4 {
     padding: 2rem 2.5rem;
+    font-size: 1.8rem; /* affects footer cards */
 }
 
 /*************************/
@@ -225,7 +217,8 @@ nav ul {
     /* centre text within its container */
     margin: auto;
     /* centres child item to create padding within #locations parent */
-    overflow: hidden; /* prevents edge items from overlapping with adjacent sections */
+    overflow: hidden;
+    /* prevents edge items from overlapping with adjacent sections */
 }
 
 .hero-image {
@@ -235,30 +228,34 @@ nav ul {
     max-height: 40vh;
     opacity: 50%;
 }
-.hero h2 { 
-    font-size: 4.5rem; 
+
+.hero h2 {
+    font-size: 4.5rem;
 }
 
-.hero h3 { 
-    padding: 5rem 0; 
+.hero h3 {
+    padding: 5rem 0;
 }
 
 /**************************/
 /*** SECTION FORMATTING ***/
 /**************************/
 
-section { 
-    position: relative; /* makes children accept position style */
-    overflow: hidden; /* prevents items at edge from spreading into adjacent sections */
-} 
+section {
+    position: relative;
+    /* makes children accept position style */
+    overflow: hidden;
+    /* prevents items at edge from spreading into adjacent sections */
+}
 
 section .brand-image {
     position: absolute;
     right: -40px;
-    top: 5vh; /* hides a bit and compensates for 10vh sticky header */
+    top: 5vh;
+    /* hides a bit and compensates for 10vh sticky header */
     max-height: 20vh;
     opacity: 50%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 /* background colours */
@@ -270,6 +267,7 @@ section .brand-image {
     background: linear-gradient(rgba(0, 255, 127, .3),
             transparent);
 }
+
 #adjust {
     background: linear-gradient(rgba(218, 165, 32, .5),
             transparent,
@@ -294,8 +292,7 @@ section .brand-image {
 #play,
 #adjust,
 #more,
-#about,
-#coming-soon {
+#about {
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -401,6 +398,8 @@ section .brand-image {
     font-size: 2.2rem;
 }
 
+/* TODO: create a 'record to computer' section */
+
 /**********************/
 /*** ADJUST SECTION ***/
 /**********************/
@@ -436,73 +435,14 @@ section .brand-image {
     /* keep icons in line at top edge of row */
 }
 
-
-
-#adjust .cards-with-bullets ul li {
-    font-size: 1.7rem;
-}
-
 #adjust .inner-nav li {
     list-style: none;
 }
 
-/**************/
-/*** MORE ***/
-/*************/
-
-/* TODO: move these items to other sections, and create a 'record to computer' section */
-.more-head {
-    min-height: 100vh;
-    width: 90%;
-    /* make smaller flexbox than parent element */
-    margin: auto;
-    /* centres child item to create padding within #locations parent */
-    padding: 0 3rem 3rem 3rem;
-    /* explicit to accommodate sticky header's height */
-}
-
-/* set up paragraphs with grid layout */
-.more-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:
-        15rem 25rem;
-    grid-template-areas:
-        "para1 para2"
-        "para3 para3";
-    flex-direction: column;
-    grid-gap: 2rem;
-}
-
-#more h3 {
-    font-size: 2.2rem;
-}
-
-/* set up child elements as boxes */
-#more .box-grid {
-    padding: 2rem 0;
-}
-
-.para1 {
-    grid-area: para1;
-}
-
-.para2 {
-    grid-area: para2;
-}
-
-.para3 {
-    grid-area: para3;
-}
-
-.para4 {
-    grid-area: para4;
-}
 
 #setup .inner-nav ul,
 #play .inner-nav ul,
 #adjust .inner-nav ul,
-#more .inner-nav ul,
 #about .inner-nav ul {
     /* styled after nav ul */
     display: flex;
@@ -520,7 +460,6 @@ section .brand-image {
 }
 
 /* button(s) at bottom */
-#more .inner-nav,
 #about .inner-nav {
     /* styled after nav */
     display: flex;
@@ -544,26 +483,37 @@ section .brand-image {
 /************************/
 
 .about-head {
+    width: 90%;
+    margin: auto;
     min-height: 100vh;
-    padding: 0 3rem 3rem 3rem;
-    /* explicit to accommodate sticky header's height */
+}
+
+#about h3 {
+    font-size: 2.2rem;
 }
 
 .about-wrapper {
     width: 90%;
     padding-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 15% 1fr;
     grid-template-rows:
-        12rem 30rem;
+        12rem 25rem;
     grid-template-areas:
-        "about1 about1"
-        "about2 about3";
+        "about1 about3"
+        "about2 about4";
     flex-direction: column;
-    grid-gap: 2.5rem;
+    grid-gap: 2rem;
 }
 
+#about img {
+    max-width: 60%;
+    align-self: center;
+}
 
+#about a {
+    color: rgb(170, 20, 200);
+}
 
 /* About Section boxes */
 
@@ -577,6 +527,10 @@ section .brand-image {
 
 .about3 {
     grid-area: about3;
+}
+
+.about4 {
+    grid-area: about4;
 }
 
 
@@ -632,49 +586,67 @@ section .brand-image {
     padding: 1rem 3rem;
 }
 
-/**********************/
-/*** FOOTER ***********/
-/**********************/
+/****************************/
+/*** FOOTER - COMING SOON ***/
+/****************************/
 
 footer {
     color: white;
     background: rgba(19, 28, 39, 1);
+    min-height: 100vh;
+    display: flex;
+
+}
+
+.footer-head {
+    width: 90%;
+    /* make smaller flexbox than parent element */
+    margin: auto;
 }
 
 .footer-wrapper {
-    display: flex;
-    padding: 2rem;
-    width: 90%;
-    margin: auto;
-    align-items: center;
-    min-height: 10vh;
     flex-wrap: wrap;
 }
 
-footer h5 {
-    flex: 1 1 40rem;
-    font-size: 1.6rem;
+.bottom-footer-wrapper {
+    width: 90%;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr 1fr;
+    grid-template-rows:
+        2rem 2rem 2rem;
+    grid-template-areas:
+        "footer1 footer4 footer7 footer10"
+        "footer2 footer5 footer8 footer11"
+        "footer3 footer6 footer9 footer12";
+    flex-direction: column;
+    grid-gap: 0;
+    /* position the bottom icons */
+    position: absolute; /* makes this container positionable */
+    bottom: 0; /* fixes container to bottom */
 }
 
-footer h4 {
-    font-size: 2.2rem;
-}
-
-footer ul {
-    display: flex;
-    list-style: none;
-    flex: 1 1 40rem;
-    justify-content: space-between;
-    align-items: center;
+footer img {
+    max-width: 24px;
+    align-self: center;
 }
 
 footer a {
     color: lightblue;
 }
 
-footer ul li img {
-    max-width: 28px;
+footer p {
+    font-size: 1.2rem;
 }
+
+/* footer grid placements */
+
+.footer1 { grid-area: footer1; }
+.footer2 { grid-area: footer2; }
+.footer3 { grid-area: footer3; }
+.footer5 { grid-area: footer5; }
+.footer8 { grid-area: footer8; }
+.footer11 { grid-area: footer11; }
 
 /*********************/
 /*** MEDIA QUERIES ***/
@@ -713,7 +685,8 @@ footer ul li img {
     }
 
     section .brand-image {
-        max-height: 18vh; /* smaller for ipads etc */
+        max-height: 18vh;
+        /* smaller for ipads etc */
         opacity: 40%;
     }
 
@@ -754,7 +727,8 @@ footer ul li img {
     }
 
     section .brand-image {
-        max-height: 15vh; /* smaller for ipads etc */
+        max-height: 15vh;
+        /* smaller for ipads etc */
         opacity: 30%;
     }
 

@@ -29,12 +29,13 @@
         <nav>
             <h1 id="logo"><a href="#start">TinyGuide: Volca Keys</a></h1>
             <!-- if TinyGuide is taken, try HeidiGuides -->
+            <!-- NOTE: this template doesn't offer a mobile 'hamburger' icon -->
             <ul>
                 <li><a href="#setup">Setup</a></li>
                 <li><a href="#play">Play</a></li>
                 <li><a href="#adjust">Adjust</a></li>
-                <li><a href="#more">More</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#coming-soon">More</a></li>
             </ul>
         </nav>
     </header>
@@ -59,15 +60,20 @@
             <h1 class="main-title">Setup</h1>
             <div class="setup-wrapper">
                 <div>
-                        <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
+                    <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
                     <h2>Background</h2>
                     <p>
                         Your Volca Keys contains a sequencer with 8 memory slots.
-                        On scrap paper, note the slots you'll use for this song, and any
-                        slots you prepared for other songs so you don't accidentally overwrite those.
+                        Each holds one recorded pattern of 16 steps.
                         The plan is to record up to 8 patterns in memory to combine as a song.
-                        Each pattern has 16 steps. You can also play real-time like a piano,
-                        to record on a computer or play live.
+                        On scrap paper, note the memory slots and what they contain; it may help later
+                        when assembling your song.</p>
+                    <p>
+                        Recording live playing involves quantization, which is
+                        on by default: key presses are recorded at the nearest step. You can alternately use
+                        the Step Recording mode where you'll toggle each step on or off for the current
+                        sound. Another fine option is to perform live while recording on a computer through
+                        audio cables and an audio interface.
                     </p>
                     <h2>Select a memory slot</h2>
                     <p>Press
@@ -90,14 +96,16 @@
                     </p>
                     <h2>What's next?</h2>
                     <p>With the memory slot selected and playing, keep listening and when you're ready,
-                        toggle <button class="instruction">Record</button> to add more to the slot. Alternatively use 'step recording' described
+                        toggle <button class="instruction">Record</button> to add more to the slot. Alternatively use
+                        'step recording' described
                         later.
                         A red dot moves left to right as the sequencer plays, to indicate the current step.
                         Subsequent recording adds to the recorded pattern unless you erase the slot first.
                     </p>
                     <p>
-                        Once patterns are saved to several memory slots, press <button class="instruction">Memory</button> +
-                        <button class="instruction">M1</button> through 
+                        Once patterns are saved to several memory slots, press <button
+                            class="instruction">Memory</button> +
+                        <button class="instruction">M1</button> through
                         <button class="instruction">M8</button> to play them.
                         The sequencer continually loops while you shift between memory slots.
                         You could record your song to a computer in this manner using audio connections; you can
@@ -125,24 +133,33 @@
     </section>
     <section id="play">
         <header class="play-head">
-                <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
-                <h1 class="main-title">Play and Record</h1>
+            <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
+            <h1 class="main-title">Play and Record</h1>
             <div class="play-wrapper">
                 <h2>Background</h2>
                 <p>
                     Start your song making by recording melodies or chords to a pattern.
                     First we'll look at the real-time recording method, then the step-recording method.
                 </p>
+                <h2>Metronome</h2>
+                <p>
+                    To toggle on and off, hold
+                    <button class="instruction">Fuction</button> +
+                    <button class="instruction">Metronome</button>
+                </p>
                 <h2>Record real-time playing</h2>
                 <p>
-                    If sequencer isn't running, select the desired memory slot first, then press
-                    <button class="instruction">Record</button> then play your notes. If the sequencer
-                    is already playing the pattern, toggle recording on and off by pressing
-                    <button class="instruction">Record</button>; your playing will add to the recorded
-                    pattern (results may be unpredictable). To begin playing the sequencer and recording at
-                    the same time, press
+                    If the sequencer isn't running, select the desired memory slot first, then press
+                    <button class="instruction">Record</button> then play your notes.
+                </p>
+                <p>
+                    If the sequencer
+                    is currently playing a pattern, toggle recording on and off by pressing
+                    <button class="instruction">Record</button> . Results may be unpredictable.</p>
+                <p>
+                    To start sequencer with recording active, hold
                     <button class="instruction">Play</button> +
-                    <button class="instruction">Record</button> at the same time.
+                    <button class="instruction">Record</button> .
                 </p>
                 <h2>Step Recording</h2>
                 <p>Coming soon.</p>
@@ -180,8 +197,8 @@
     </section>
     <section id="adjust">
         <header class="adjust-head">
-                <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
-                <h1 class="main-title">Adjust Sounds</h1>
+            <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
+            <h1 class="main-title">Adjust Sounds</h1>
             <div class="adjust-wrapper">
                 <h2>Background</h2>
                 <p>
@@ -339,70 +356,37 @@
         </header>
     </section>
 
-    <section id="more">
-        <header class="more-head">
-                <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
-                <h1 class="main-title">More tips</h1>
-            <div class="more-wrapper">
-                <div class="para1 box-grid">
-                    <h3>
-                        Toggle metronome on/off: <br />
-                        hold Function and press Metronome key
-                    </h3>
-                </div>
-                <div class="para2 box-grid">
-                    <h3>
-                        Quantization: <br />
-                        on by default, key presses are placed at the nearest step
-                    </h3>
-                </div>
-                <div class="box-grid para3">
-                    <h3>
-                        Recording live performance: <br />
-                        Recording to the built-in sequencer can produce strange results. And it doesn't suit continuous
-                        longer sequences.
-                        Record live playing and adjustments in real-time
-                        using an audio interface (AI) connected to desktop or mobile device.
-                        Use mono cable (not stereo) to the mono inputs of the AI.
-                        Then arrange clips with DAW software.
-                    </h3>
-                </div>
-
-            </div>
-
-
-            <div class="inner-nav">
-                <ul>
-                    <li><a href="#coming-soon"><button>Other TinyGuides</button></a></li>
-                </ul>
-            </div>
-        </header>
-    </section>
-
     <section id="about">
+        <!-- this section uses grid method of layout -->
         <header class="about-head">
-                <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
-                <h1 class="main-title">About TinyGuides</h1>
+            <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
+            <h1 class="main-title">About TinyGuides</h1>
+            <h2>For basic info all in one page, without menu diving!</h2>
             <div class="about-wrapper">
                 <div class="about1 box-grid">
-                    <h3>
-                        This TinyGuide website gives you basic info, all in one page - no menu diving!
-                    </h3>
+                    <img src="./icons/music.png" alt="">
                 </div>
                 <div class="about2 box-grid">
-                    <p>We're a game and graphics studio in Victoria, British Columbia.
-                        Our projects live on YouTube, itch.io, GitHub,
-                        and other places around the web. We love interactive technology, and not just games.
-                        We work on visual novels, tutorials, and plain ol' entertainment that makes ya feel good.
-                    </p>
+                    <img src="./icons/radio.png" alt="">
                 </div>
                 <div class="about3 box-grid">
                     <p>
-                        We also love Instagram, and have a growing social media consultancy.
-                        Thanks for stopping by and learning a bit about us. We love to hear from you now.
-                        <!-- TODO: Send Comments line would probably require a button? or should it just be a news signup? -->
-                        Send comments and inquiries.
-
+                        Hi! TinyGuides are made by Bada Digital Marketing Co. in Victoria, British Columbia.
+                        What do you think about our Volca Keys tutorial? Send feedback and follow our designer Heidi on
+                        Instagram <a href="https://www.instagram.com/synthsoundcrafter">@synthsoundcrafter</a>
+                        or <a href="mailto:synthcrafter@gmail.com">Send a message</a> to her.
+                    </p>
+                </div>
+                <div class="about4 box-grid">
+                    <p>
+                        We love creative technology including synthesizers and sharing music you've made on Instagram.
+                        Passions run deep
+                        amongst music makers, don't they? We love music gear because it offers so many human benefits:
+                        self-expression,
+                        social connection, and the balance of challenge and accomplishment. Music is more than simple
+                        entertainment. And it's
+                        everwhere! Tell us if you know of a culture that doesn't value music in past or present, near or
+                        far.
                     </p>
                 </div>
 
@@ -443,54 +427,69 @@
     </section>
 
     <footer>
-        <section>
-        <div class="footer-wrapper" id="coming-soon">
-                <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
-                <h1 class="main-title">Coming soon:</h1>
-            <!-- TODO: coming soon belongs atop the JDXI
-            and "in development" for the PO-28 cuz I'll build that next -->
-            <div class="cards">
-                <!-- TODO: make these smaller -->
-                <!-- TODO: cards section could be buttons for other TinyGuides I've made -->
-                <!-- TODO: want to add h2 "More TinyGuides" but it screws up the formatting -->
-                <!-- TODO: make flat icons for these; add "coming soon" -->
-                <div class="card">
-                    <div class="card-icon">
-                        <img src="./icons/synthesizer.png" alt="">
+        <section id="coming-soon">
+            <header class="footer-head">
+                <div class="footer-wrapper">
+                    <img class="brand-image" src="./icons/hero-knob.png" alt="icon of a single adjustment knob">
+                    <h1 class="main-title">TinyGuides Collection</h1>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-icon">
+                                <img src="./icons/synthesizer.png" alt="">
+                            </div>
+                            <h4>Volca Keys</h4>
+                            <p>Great little analogue synthesizer from Korg.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <img src="./icons/music.png" alt="">
+                            </div>
+                            <h4>PO-28 Robot - Coming Soon</h4>
+                            <p>Pocket Operator: tiny synthesizer with grand features.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <img src="./icons/radio.png" alt="">
+                            </div>
+                            <h4>Roland JD-Xi - Coming Soon</h4>
+                            <p>Workhorse-scale synthesizer in a small size.</p>
+                        </div>
                     </div>
-                    <h4>Volca Keys</h4>
-                    <p>Great little analogue synthesizer from Korg.</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <img src="./icons/music.png" alt="">
+                <div class="bottom-footer-wrapper">
+                    <div class="footer1 box-grid">
+                        <p>Website &copy; <script>
+                                document.write(new Date().getFullYear())
+                            </script> Bada Digital Marketing Co.</p>
                     </div>
-                    <h4>PO-28 Robot</h4>
-                    <p>Pocket Operator: tiny synthesizer with grand features.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <img src="./icons/radio.png" alt="">
+                    <div class="footer2 box-grid">
+                        <p>
+                            Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                        </p>
                     </div>
-                    <h4>Roland JD-Xi</h4>
-                    <p>Workhorse-scale synthesizer in a small size.</p>
-                </div>
-            </div>
-            <h5>Website &copy; <script>
-                    document.write(new Date().getFullYear())
-                </script> Bada Digital Marketing Co.<br />
-                Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br />
-                Photos by amazing contributors at <a href="https://www.pixabay.com">Pixabay.</a>
-            </h5>
+                    <div class="footer3 box-grid">
+                        <p>
+                            Photos by amazing contributors at <a href="https://www.pixabay.com">Pixabay.</a>
+                        </p>
+                    </div>
+                    <!-- TODO: put social media icons at top also -->
 
-            <ul><!-- TODO: put social media icons at top also -->
-                <li><a href="https://www.instagram.com/synthsoundcrafter"><img src="./icons/instagram.png"
-                            alt="Icon for web designer's Instagram profile"></a></li>
-                <li><a href="https://www.tinyurl.com/synthcrafter"><img src="./icons/facebook.png" alt="Icon for web designer's Facebook Page"></a></li>
-                <li><a href="http://www.gumroad.com/synthcrafter"><img src="./icons/shopping-bag.png" alt="Icon for web designer's music store"></a></li>
-            </ul>
-        </div>
-</section>
+                    <div class="footer5 box-grid">
+                        <a href="https://www.instagram.com/synthsoundcrafter"><img src="./icons/instagram.png"
+                                alt="Icon for web designer's Instagram profile"></a>
+                    </div>
+                    <div class="footer8 box-grid">
+                        <a href="https://www.tinyurl.com/synthcrafter"><img src="./icons/facebook.png"
+                                alt="Icon for web designer's Facebook Page"></a>
+                    </div>
+                    <div class="footer11 box-grid">
+                        <a href="http://www.gumroad.com/synthcrafter"><img src="./icons/shopping-bag.png"
+                                alt="Icon for web designer's music store"></a>
+                    </div>
+                </div>
+            </header>
+        </section>
     </footer>
 </body>
 
